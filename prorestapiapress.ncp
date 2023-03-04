@@ -1,0 +1,1437 @@
+<Project>
+  <Name>prorestapiapress</Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>config</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>defaultjson</Name>
+        <Access>Public</Access>
+        <Location left="137" top="42" />
+        <Size width="378" height="230" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">static string secretKey = this is a secret key, right here</Member>
+        <Member type="Field">string env = Default</Member>
+        <Member type="Field">Server server</Member>
+        <Member type="Field">string name = ComeNRead API</Member>
+        <Member type="Field">string version = 2.0.0</Member>
+        <Member type="Field">Port port = 9000</Member>
+        <Member type="Field">Database database</Member>
+        <Member type="Field">URL host = mongodb://localhost</Member>
+        <Member type="Field">string dbname = comenread</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships />
+  </ProjectItem>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>controllers</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>authorsjs</Name>
+        <Access>Public</Access>
+        <Location left="72" top="27" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">const require BaseController = ./basecontroller</Member>
+        <Member type="Field">const require swagger = swagger-node-restify</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>basecontrollerjs</Name>
+        <Access>Public</Access>
+        <Location left="250" top="27" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">require restify = restify</Member>
+        <Member type="Field">require errors = restify-errors</Member>
+        <Member type="Field">require halson = halson</Member>
+        <Member type="Field">require logger = ../lib/logger</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>bookjs</Name>
+        <Access>Public</Access>
+        <Location left="432" top="28" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">require BaseController = ./basecontroller</Member>
+        <Member type="Field">require swagger = swagger-node-restify</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>clientreviewsjs</Name>
+        <Access>Public</Access>
+        <Location left="793" top="32" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">require BaseController = ./basecontroller</Member>
+        <Member type="Field">require swagger = swagger-node-restify</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>indexjs</Name>
+        <Access>Public</Access>
+        <Location left="1344" top="32" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">require BookSales = ./booksales</Member>
+        <Member type="Field">require Stores = ./stores</Member>
+        <Member type="Field">require Employees = ./employees</Member>
+        <Member type="Field">require CLientReviews = ./clientreviews</Member>
+        <Member type="Field">require Clients = ./clients</Member>
+        <Member type="Field">require Books = ./books</Member>
+        <Member type="Method">void module.exports()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>BookSalesAuthors</Name>
+        <Access>Public</Access>
+        <Location left="72" top="299" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Constructor">public BookSalesAuthors(var lib)</Member>
+        <Member type="Method">public void queryAuthors(var res, var bext, var criteria, var bookIds)</Member>
+        <Member type="Method">public void list(var req, var res, var next)</Member>
+        <Member type="Method">public void details(var req, var res, var next)</Member>
+        <Member type="Method">public void create(var req, var res, var next)</Member>
+        <Member type="Method">public void update(var req, var res, var next)</Member>
+        <Member type="Method">public void authorBooks(var req, var res, var next)</Member>
+        <Member type="Method">controller module.exports()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>BaseController</Name>
+        <Access>Public</Access>
+        <Location left="245" top="300" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Constructor">public BaseController()</Member>
+        <Member type="Method">public void setUpActions(var app, var sw)</Member>
+        <Member type="Method">public void addAction(var spec, var fn)</Member>
+        <Member type="Method">public void RESTError(var type, var msg)</Member>
+        <Member type="Method">public void writeHal(var res, var obj)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>require</Name>
+        <Access>Public</Access>
+        <Location left="427" top="299" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Constructor">public require(string reuiqrestringurl)</Member>
+        <Member type="Method">BaseController module.exports()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Books</Name>
+        <Access>Public</Access>
+        <Location left="619" top="300" />
+        <Size width="162" height="230" />
+        <Collapsed>False</Collapsed>
+        <Member type="Constructor">public Books(var lib)</Member>
+        <Member type="Method">public void mergeStores(List &lt;T&gt; list1, List&lt;T&gt; list2)</Member>
+        <Member type="Method">public void list(var req, var res, var next)</Member>
+        <Member type="Method">public void details(var req, var res, var next)</Member>
+        <Member type="Method">public void create(var req, var res, var next)</Member>
+        <Member type="Method">public void bookAuthors(var req, var res, var next)</Member>
+        <Member type="Method">public void bookReviews(var req, var res, var next)</Member>
+        <Member type="Method">public void update(var req, var res, var next)</Member>
+        <Member type="Method">controller module.exports()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>BookSalesBooksSales</Name>
+        <Access>Public</Access>
+        <Location left="72" top="526" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Constructor">public BookSalesBooksSales(var lib)</Member>
+        <Member type="Method">public void list(var req, var res, var next)</Member>
+        <Member type="Method">public void create(var req, var res, var next)</Member>
+        <Member type="Method">controller module.exports()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>booksalesjs</Name>
+        <Access>Public</Access>
+        <Location left="602" top="32" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">require BaseController = ./basecontroller</Member>
+        <Member type="Field">require swagger = swagger-node-restify</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>ClientReviews</Name>
+        <Access>Public</Access>
+        <Location left="796" top="308" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Constructor">public ClientReviews(var lib)</Member>
+        <Member type="Method">public void create(var req, var res, var next)</Member>
+        <Member type="Method">controller module.exports()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>clientjs</Name>
+        <Access>Public</Access>
+        <Location left="975" top="28" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">require BaseController = ./basecontroller</Member>
+        <Member type="Field">require swagger = swagger-node-restify</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Clients</Name>
+        <Access>Public</Access>
+        <Location left="975" top="299" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Constructor">public Clients(var lib)</Member>
+        <Member type="Method">public void create(var req, var res, var next)</Member>
+        <Member type="Method">controller module.exports()</Member>
+        <Member type="Method">public void list(var req, var res, var next)</Member>
+        <Member type="Method">public void details(var req, var res, var next)</Member>
+        <Member type="Method">public void update(var req, var res, var next)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>employeesjs</Name>
+        <Access>Public</Access>
+        <Location left="1344" top="308" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">require BaseController = ./basecontroller</Member>
+        <Member type="Field">require swagger = swagger-node-restify</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Employees</Name>
+        <Access>Public</Access>
+        <Location left="245" top="537" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Constructor">public Employees(var lib)</Member>
+        <Member type="Method">public void create(var req, var res, var next)</Member>
+        <Member type="Method">controller module.exports()</Member>
+        <Member type="Method">public void list(var req, var res, var next)</Member>
+        <Member type="Method">public void details(var req, var res, var next)</Member>
+        <Member type="Method">public void update(var req, var res, var next)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>storesjs</Name>
+        <Access>Public</Access>
+        <Location left="1159" top="32" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">require BaseController = ./basecontroller</Member>
+        <Member type="Field">require swagger = swagger-node-restify</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Stores</Name>
+        <Access>Public</Access>
+        <Location left="1159" top="300" />
+        <Size width="162" height="244" />
+        <Collapsed>False</Collapsed>
+        <Member type="Constructor">public Stores(var lib)</Member>
+        <Member type="Method">controller module.exports()</Member>
+        <Member type="Method">public void list(var req, var res, var next)</Member>
+        <Member type="Method">public void storeBooks(var req, var res, var next)</Member>
+        <Member type="Method">public void details(var req, var res, var next)</Member>
+        <Member type="Method">public void update(var req, var res, var next)</Member>
+        <Member type="Method">public void storeEmployees(var req, var res, var next)</Member>
+        <Member type="Method">public void storeBooksales(var req, var res, var next)</Member>
+        <Member type="Method">public void create(var req, var res, var next)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships />
+  </ProjectItem>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>lib</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>dbjs</Name>
+        <Access>Public</Access>
+        <Location left="88" top="43" />
+        <Size width="162" height="426" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">require config = config</Member>
+        <Member type="Field">require _ = underscore</Member>
+        <Member type="Field">require mongoose = mongoose</Member>
+        <Member type="Field">string Schema = mongoose.Schema</Member>
+        <Member type="Field">object obj</Member>
+        <Member type="Method">require obj.models(string s, object obj)</Member>
+        <Member type="Method">obj module.export()</Member>
+        <Member type="Method">public var translateComplexType(var v, var strType)</Member>
+        <Member type="Method">public var getModelFromSchema(var schema)</Member>
+        <Member type="Method">public var transkateTypeToJs(var t)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>helpersjs</Name>
+        <Access>Public</Access>
+        <Location left="269" top="43" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">require halson = halson</Member>
+        <Member type="Field">require config = config</Member>
+        <Member type="Method">void module.exports()</Member>
+        <Member type="Method">public void setupRoutes(Server server, var swagger, var lib)</Member>
+        <Member type="Method">public var validateKey(var hmacdata, var key, var lib)</Member>
+        <Member type="Method">public object makeHAL(var data, var links, var mebed)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>indexjs</Name>
+        <Access>Public</Access>
+        <Location left="447" top="43" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">require helpers = ./helpers</Member>
+        <Member type="Field">require logger = ./logger</Member>
+        <Member type="Field">require controllers = ./controllers</Member>
+        <Member type="Field">require schemas = ./schemas</Member>
+        <Member type="Field">require schemaValidator = ./schemaValidator</Member>
+        <Member type="Field">require db = ./db</Member>
+        <Member type="Method">void module.exports()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>loggerjs</Name>
+        <Access>Public</Access>
+        <Location left="626" top="43" />
+        <Size width="162" height="366" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">require config = config</Member>
+        <Member type="Field">var _ENV = process.env.NODE_ENV || config.get('env')</Member>
+        <Member type="Field">require createLogger = winston</Member>
+        <Member type="Field">require format = winston</Member>
+        <Member type="Field">require addColors = winston</Member>
+        <Member type="Field">require transports = winston</Member>
+        <Member type="Field">format combine</Member>
+        <Member type="Field">format timestamp</Member>
+        <Member type="Field">format label</Member>
+        <Member type="Field">format printf</Member>
+        <Member type="Field">format colorize</Member>
+        <Member type="Field">Dictionary myCustomsLevels</Member>
+        <Member type="Method">public format myFormat()</Member>
+        <Member type="Method">public void printf(var info)</Member>
+        <Member type="Method">public logger createLogger(format combine, levels levels, transports transports)</Member>
+        <Member type="Method">public Dictionary addColors(var myCustomLevels)</Member>
+        <Member type="Method">logger module.exports()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>schemaValidatorjs</Name>
+        <Access>Public</Access>
+        <Location left="798" top="43" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">require tv4 = tv4</Member>
+        <Member type="Field">require formats = tv4-formats</Member>
+        <Member type="Field">require schemas = ../request_schemas/</Member>
+        <Member type="Field">validateRequest validate</Member>
+        <Member type="Method">void module.exports()</Member>
+        <Member type="Method">public var validate(var req)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>format</Name>
+        <Access>Public</Access>
+        <Location left="271" top="281" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>info</Name>
+        <Access>Public</Access>
+        <Location left="446" top="284" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int timestamp</Member>
+        <Member type="Field">int label</Member>
+        <Member type="Field">int level</Member>
+        <Member type="Field">int message</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Enum">
+        <Name>levels</Name>
+        <Access>Public</Access>
+        <Location left="98" top="497" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Value>error</Value>
+        <Value>warn</Value>
+        <Value>info</Value>
+        <Value>debug</Value>
+      </Entity>
+      <Entity type="Enum">
+        <Name>colors</Name>
+        <Access>Public</Access>
+        <Location left="277" top="517" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Value>red</Value>
+        <Value>yellow</Value>
+        <Value>blue</Value>
+        <Value>violet</Value>
+      </Entity>
+    </Entities>
+    <Relationships />
+  </ProjectItem>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>models</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>authorjs</Name>
+        <Access>Public</Access>
+        <Location left="26" top="24" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">require mongoose = mongoose</Member>
+        <Member type="Field">require jsonSelect = mongoose-json-select</Member>
+        <Member type="Field">require helpers = ../lib/helpers</Member>
+        <Member type="Method">mongoose.model module.export(var db)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>bookjs</Name>
+        <Access>Public</Access>
+        <Location left="200" top="24" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">require mongoose = mongoose</Member>
+        <Member type="Field">require jsonSelect = mongoose-json-select</Member>
+        <Member type="Field">require helpers = ../lib/helpers</Member>
+        <Member type="Method">mongoose.model module.export(var db)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>booksalejs</Name>
+        <Access>Public</Access>
+        <Location left="384" top="24" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">require mongoose = mongoose</Member>
+        <Member type="Field">require jsonSelect = mongoose-json-select</Member>
+        <Member type="Field">require helpers = ../lib/helpers</Member>
+        <Member type="Method">mongoose.model module.export(var db)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>clientjs</Name>
+        <Access>Public</Access>
+        <Location left="26" top="269" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">require mongoose = mongoose</Member>
+        <Member type="Field">require jsonSelect = mongoose-json-select</Member>
+        <Member type="Field">require helpers = ../lib/helpers</Member>
+        <Member type="Method">mongoose.model module.export(var db)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>clientviewjs</Name>
+        <Access>Public</Access>
+        <Location left="200" top="269" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">require mongoose = mongoose</Member>
+        <Member type="Field">require jsonSelect = mongoose-json-select</Member>
+        <Member type="Field">require helpers = ../lib/helpers</Member>
+        <Member type="Method">mongoose.model module.export(var db)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>employeejs</Name>
+        <Access>Public</Access>
+        <Location left="200" top="501" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">require mongoose = mongoose</Member>
+        <Member type="Field">require jsonSelect = mongoose-json-select</Member>
+        <Member type="Field">require helpers = ../lib/helpers</Member>
+        <Member type="Method">mongoose.model module.export(var db)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>storejs</Name>
+        <Access>Public</Access>
+        <Location left="384" top="501" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">require mongoose = mongoose</Member>
+        <Member type="Field">require jsonSelect = mongoose-json-select</Member>
+        <Member type="Field">require helpers = ../lib/helpers</Member>
+        <Member type="Method">mongoose.model module.export(var db)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>indexjs</Name>
+        <Access>Public</Access>
+        <Location left="443" top="241" />
+        <Size width="258" height="254" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">require Book = ./book</Member>
+        <Member type="Field">require Booksale = ./booksale</Member>
+        <Member type="Field">require Client = ./client</Member>
+        <Member type="Field">require ClientReview = ./clientreview</Member>
+        <Member type="Field">require Employee = ./employee</Member>
+        <Member type="Field">require Store = ./store</Member>
+        <Member type="Field">require Author = ./author</Member>
+        <Member type="Field">var db</Member>
+        <Member type="Method">function module.exports(var db)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships />
+  </ProjectItem>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>request_schemas</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>booksalesjs</Name>
+        <Access>Public</Access>
+        <Location left="404" top="44" />
+        <Size width="162" height="165" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">Schema schema</Member>
+        <Member type="Method">public void getbooksales(var validate)</Member>
+        <Member type="Method">function module.exports()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>indexjs</Name>
+        <Access>Public</Access>
+        <Location left="587" top="44" />
+        <Size width="273" height="346" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">require booksales = ./booksales</Member>
+        <Member type="Method">void module.exports()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Schema</Name>
+        <Access>Public</Access>
+        <Location left="404" top="225" />
+        <Size width="162" height="165" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">DateTime startdate</Member>
+        <Member type="Field">DateTime enddate</Member>
+        <Member type="Field">string store_id</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships />
+  </ProjectItem>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>samples</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>classsamplejs</Name>
+        <Access>Public</Access>
+        <Location left="40" top="28" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>AnotherClass</Name>
+        <Access>Public</Access>
+        <Location left="246" top="28" />
+        <Size width="223" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Constructor">public AnotherClass(var p1, var p2)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>SampleClass</Name>
+        <Access>Public</Access>
+        <Location left="246" top="339" />
+        <Size width="223" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Constructor">public SampleClass(var param1, var param2)</Member>
+        <Member type="Property">public var param2 { get; set; }</Member>
+        <Member type="Property">public var param2 { get; set; }</Member>
+        <Member type="Property">public var sum { get; }</Member>
+        <Member type="Method">public static var description()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Comment">
+        <Text>class AnotherClass {
+
+	constructor(p1, p2) {
+		this._param1 = p1;
+		this._param2 = p2;
+	}
+
+}
+
+class SampleClass extends AnotherClass {
+
+	constructor(param1, param2) {
+		super(param1, param2)
+	}
+
+	set param1(val) {
+		this._param1 = +val;
+	}
+	set param2(val) {
+		this._param2 = +val;
+	}
+
+	get param1() {
+		return "This is param1: " + this._param1;
+	}
+
+	get sum() {
+		return this._param1 + this._param2;
+	}
+
+	static description() {
+		return "This is a static method, like the ones you're used to using...";
+	}
+}
+
+
+let sampleObj = new SampleClass(1,2);
+console.log(sampleObj.sum);
+
+sampleObj.param1 = "100";
+console.log(sampleObj.sum);
+console.log(sampleObj.param1);
+console.log(SampleClass.description());</Text>
+        <Location left="494" top="15" />
+        <Size width="531" height="807" />
+      </Entity>
+    </Entities>
+    <Relationships>
+      <Relationship type="Nesting" first="1" second="2">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>schemas</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>Store</Name>
+        <Access>Public</Access>
+        <Location left="575" top="267" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int id</Member>
+        <Member type="Field">int newField</Member>
+        <Member type="Field">string name</Member>
+        <Member type="Field">string address</Member>
+        <Member type="Field">string state</Member>
+        <Member type="Field">List&lt;String&gt; phone_numbers</Member>
+        <Member type="Field">List&lt;Employee&gt; employees</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Employee</Name>
+        <Access>Public</Access>
+        <Location left="575" top="25" />
+        <Size width="162" height="230" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int id</Member>
+        <Member type="Field">string first_name</Member>
+        <Member type="Field">string last_name</Member>
+        <Member type="Field">string birthdate</Member>
+        <Member type="Field">Address address</Member>
+        <Member type="Field">List&lt;String&gt; phone_numbers</Member>
+        <Member type="Field">string email</Member>
+        <Member type="Field">string hire_date</Member>
+        <Member type="Field">number employee_number</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>ClientReview</Name>
+        <Access>Public</Access>
+        <Location left="393" top="255" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int id</Member>
+        <Member type="Field">Client client</Member>
+        <Member type="Field">Book book</Member>
+        <Member type="Field">string review_text</Member>
+        <Member type="Field">int start = 0</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Client</Name>
+        <Access>Public</Access>
+        <Location left="393" top="25" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int id</Member>
+        <Member type="Field">string name</Member>
+        <Member type="Field">Address address</Member>
+        <Member type="Field">string phone_number</Member>
+        <Member type="Field">string email</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Book</Name>
+        <Access>Public</Access>
+        <Location left="10" top="348" />
+        <Size width="162" height="230" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int id</Member>
+        <Member type="Field">string title</Member>
+        <Member type="Field">List&lt;Author&gt; authors</Member>
+        <Member type="Field">string isbn_code</Member>
+        <Member type="Field">List&lt;StoreList&gt; stores</Member>
+        <Member type="Field">string genre</Member>
+        <Member type="Field">string description</Member>
+        <Member type="Field">List&lt;ClientReview&gt; reviews</Member>
+        <Member type="Field">number price = 0</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Author</Name>
+        <Access>Public</Access>
+        <Location left="197" top="25" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int id</Member>
+        <Member type="Field">string name</Member>
+        <Member type="Field">string description</Member>
+        <Member type="Field">List&lt;Book&gt; books</Member>
+        <Member type="Field">string website</Member>
+        <Member type="Field">string avatar</Member>
+        <Member type="Field">Address address</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Address</Name>
+        <Access>Public</Access>
+        <Location left="197" top="255" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">string street</Member>
+        <Member type="Field">int house_number</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>StoreList</Name>
+        <Access>Public</Access>
+        <Location left="10" top="621" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">Store store</Member>
+        <Member type="Field">int copies</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>BookSale</Name>
+        <Access>Public</Access>
+        <Location left="10" top="25" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int id</Member>
+        <Member type="Field">DateTime date</Member>
+        <Member type="Field">List&lt;Book&gt; books</Member>
+        <Member type="Field">Store store</Member>
+        <Member type="Field">Employee employee</Member>
+        <Member type="Field">Client client</Member>
+        <Member type="Field">int totalAmount</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>clientjs</Name>
+        <Access>Public</Access>
+        <Location left="566" top="552" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>employeejs</Name>
+        <Access>Public</Access>
+        <Location left="742" top="552" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>clientreviewjs</Name>
+        <Access>Public</Access>
+        <Location left="914" top="552" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>storejs</Name>
+        <Access>Public</Access>
+        <Location left="1262" top="552" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>bookjs</Name>
+        <Access>Public</Access>
+        <Location left="397" top="552" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>booksalesjs</Name>
+        <Access>Public</Access>
+        <Location left="223" top="552" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>authorjs</Name>
+        <Access>Public</Access>
+        <Location left="1090" top="552" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>indexjs</Name>
+        <Access>Public</Access>
+        <Location left="751" top="25" />
+        <Size width="258" height="254" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">require Book = ./book</Member>
+        <Member type="Field">require BookSale = ./booksale</Member>
+        <Member type="Field">require Client = ./client</Member>
+        <Member type="Field">require ClientReview = ./clientreview</Member>
+        <Member type="Field">require Employee = ./employee</Member>
+        <Member type="Field">require Store = ./store</Member>
+        <Member type="Field">require Author = ./author</Member>
+        <Member type="Method">function module.exports(var models)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships />
+  </ProjectItem>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>swagger-ui</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>css</Name>
+        <Access>Public</Access>
+        <Location left="139" top="17" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>fonts</Name>
+        <Access>Public</Access>
+        <Location left="323" top="18" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>images</Name>
+        <Access>Public</Access>
+        <Location left="510" top="20" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>lib</Name>
+        <Access>Public</Access>
+        <Location left="700" top="20" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>indexhtml</Name>
+        <Access>Public</Access>
+        <Location left="181" top="278" />
+        <Size width="162" height="332" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int DOCTYPE</Member>
+        <Member type="Field">int HTML</Member>
+        <Member type="Field">int HEAD</Member>
+        <Member type="Field">int TITLE</Member>
+        <Member type="Field">List&lt;URL&gt; LINK</Member>
+        <Member type="Field">List&lt;URL&gt; SCRIPT</Member>
+        <Member type="Field">URL url</Member>
+        <Member type="Field">int BODY</Member>
+        <Member type="Field">int DIV</Member>
+        <Member type="Field">int A</Member>
+        <Member type="Field">int FORM</Member>
+        <Member type="Method">public void SwaggerUI()</Member>
+        <Member type="Method">public void addApiKeyAuthorization()</Member>
+        <Member type="Method">public void change()</Member>
+        <Member type="Method">public void load()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>o2chtml</Name>
+        <Access>Public</Access>
+        <Location left="363" top="278" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">string qp = null</Member>
+        <Member type="Method">public void location()</Member>
+        <Member type="Method">public void JSONparse()</Member>
+        <Member type="Method">public void tokenUrl()</Member>
+        <Member type="Method">public void processAuthCode()</Member>
+        <Member type="Method">public void onOAuthComplete()</Member>
+        <Member type="Method">public void close()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>swaggeruijs</Name>
+        <Access>Public</Access>
+        <Location left="542" top="278" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>swaggeruiminjs</Name>
+        <Access>Public</Access>
+        <Location left="723" top="278" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships />
+  </ProjectItem>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>project</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>gitattributes</Name>
+        <Access>Public</Access>
+        <Location left="37" top="29" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">text auto</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>jpg</Name>
+        <Access>Public</Access>
+        <Location left="207" top="30" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">string filename = 9781484237144</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>bookcodejs</Name>
+        <Access>Public</Access>
+        <Location left="388" top="33" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>contributingmd</Name>
+        <Access>Public</Access>
+        <Location left="566" top="35" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>erratamd</Name>
+        <Access>Public</Access>
+        <Location left="744" top="37" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>indexjs</Name>
+        <Access>Public</Access>
+        <Location left="37" top="319" />
+        <Size width="162" height="400" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">require restify = restify</Member>
+        <Member type="Field">restify.plugins restifyPlugins</Member>
+        <Member type="Field">require colors = colors</Member>
+        <Member type="Field">require lib = ./lib</Member>
+        <Member type="Field">require swagger = swagger-node-restify</Member>
+        <Member type="Field">require config = config</Member>
+        <Member type="Field">Server server</Member>
+        <Member type="Method">Server restify.createServer()</Member>
+        <Member type="Method">void server.use(restifyPlugins queryParser)</Member>
+        <Member type="Method">header restify.defaultResponseHeaders()</Member>
+        <Member type="Method">void server.use(var req, var res, var next)</Member>
+        <Member type="Method">void server.use(var req, var res, var next)</Member>
+        <Member type="Method">void server.get()</Member>
+        <Member type="Method">void swagger.addModels(lib schemas)</Member>
+        <Member type="Method">void swagger.setAppHandler(Server server)</Member>
+        <Member type="Method">void lib.helpers.setupRoutes(var server, var swagger, var lib)</Member>
+        <Member type="Method">void swagger.configureSwaggerPaths()</Member>
+        <Member type="Method">void swagger.configure()</Member>
+        <Member type="Method">void server.listen()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>licensetxt</Name>
+        <Access>Public</Access>
+        <Location left="386" top="263" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>packagelockjson</Name>
+        <Access>Public</Access>
+        <Location left="566" top="269" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">string name</Member>
+        <Member type="Field">string version</Member>
+        <Member type="Field">string lockfileVersion</Member>
+        <Member type="Field">bool requires = true</Member>
+        <Member type="Field">DependenciesListLock dependencies</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>packagejson</Name>
+        <Access>Public</Access>
+        <Location left="745" top="273" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">string name</Member>
+        <Member type="Field">string version</Member>
+        <Member type="Field">string description</Member>
+        <Member type="Field">string main</Member>
+        <Member type="Field">string scripts</Member>
+        <Member type="Field">string author</Member>
+        <Member type="Field">string license</Member>
+        <Member type="Field">DependenciesList dependencies</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>readmemd</Name>
+        <Access>Public</Access>
+        <Location left="920" top="273" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>DependenciesList</Name>
+        <Access>Public</Access>
+        <Location left="747" top="509" />
+        <Size width="162" height="298" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">string colors</Member>
+        <Member type="Field">string config</Member>
+        <Member type="Field">string halson</Member>
+        <Member type="Field">string mongoose</Member>
+        <Member type="Field">string mongoose_json_select</Member>
+        <Member type="Field">string restify</Member>
+        <Member type="Field">string restify_errors</Member>
+        <Member type="Field">string restify_plugins</Member>
+        <Member type="Field">string swagger_node_restify</Member>
+        <Member type="Field">string tv4</Member>
+        <Member type="Field">string tv4_formats</Member>
+        <Member type="Field">string underscore</Member>
+        <Member type="Field">string winston</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>DependenciesListLock</Name>
+        <Access>Public</Access>
+        <Location left="571" top="510" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">List&lt;DependenciesLock&gt; depenedenciesListLocked</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>DependenciesLock</Name>
+        <Access>Public</Access>
+        <Location left="388" top="597" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">string name</Member>
+        <Member type="Field">string version</Member>
+        <Member type="Field">FileUrl resolved</Member>
+        <Member type="Field">code integrity</Member>
+        <Member type="Field">bool optional</Member>
+        <Member type="Field">List&lt;String&gt; requires</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships />
+  </ProjectItem>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>swaggercss</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>resetcss</Name>
+        <Access>Public</Access>
+        <Location left="105" top="64" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>screencss</Name>
+        <Access>Public</Access>
+        <Location left="280" top="69" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>typographycss</Name>
+        <Access>Public</Access>
+        <Location left="462" top="65" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships />
+  </ProjectItem>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>swaggerfonts</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>droidsansv6latin700eot</Name>
+        <Access>Public</Access>
+        <Location left="87" top="37" />
+        <Size width="262" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>droidsansv6latin700svg</Name>
+        <Access>Public</Access>
+        <Location left="105" top="88" />
+        <Size width="262" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>droidsansv6latin700ttf</Name>
+        <Access>Public</Access>
+        <Location left="151" top="141" />
+        <Size width="262" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>droidsansv6latin700woff</Name>
+        <Access>Public</Access>
+        <Location left="201" top="196" />
+        <Size width="262" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>droidsansv6latin700woff2</Name>
+        <Access>Public</Access>
+        <Location left="247" top="251" />
+        <Size width="262" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>droidsansv6latinregularwoff2</Name>
+        <Access>Public</Access>
+        <Location left="705" top="251" />
+        <Size width="262" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>droidsansv6latinregularwoff</Name>
+        <Access>Public</Access>
+        <Location left="659" top="196" />
+        <Size width="262" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>droidsansv6latinregularttf</Name>
+        <Access>Public</Access>
+        <Location left="609" top="141" />
+        <Size width="262" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>droidsansv6latinregularsvg</Name>
+        <Access>Public</Access>
+        <Location left="563" top="88" />
+        <Size width="262" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>droidsansv6latinregulareot</Name>
+        <Access>Public</Access>
+        <Location left="545" top="37" />
+        <Size width="262" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships />
+  </ProjectItem>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>swaggerimages</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>explorericonspng</Name>
+        <Access>Public</Access>
+        <Location left="140" top="42" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>logosmallpng</Name>
+        <Access>Public</Access>
+        <Location left="173" top="109" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>throbbergif</Name>
+        <Access>Public</Access>
+        <Location left="233" top="165" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>wordnikapipng</Name>
+        <Access>Public</Access>
+        <Location left="327" top="236" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships />
+  </ProjectItem>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>swaggerlib</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Structure">
+        <Name>backboneminjs</Name>
+        <Access>Public</Access>
+        <Location left="86" top="48" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+      </Entity>
+      <Entity type="Class">
+        <Name>handlebars200js</Name>
+        <Access>Public</Access>
+        <Location left="143" top="103" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>highlight73packjs</Name>
+        <Access>Public</Access>
+        <Location left="189" top="163" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>jquery180minjs</Name>
+        <Access>Public</Access>
+        <Location left="218" top="215" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>jqueryslidetominjs</Name>
+        <Access>Public</Access>
+        <Location left="271" top="270" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>jquerywiggleminjs</Name>
+        <Access>Public</Access>
+        <Location left="332" top="323" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>markedjs</Name>
+        <Access>Public</Access>
+        <Location left="377" top="382" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>sharedbundlejs</Name>
+        <Access>Public</Access>
+        <Location left="410" top="431" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>swaggerclientjs</Name>
+        <Access>Public</Access>
+        <Location left="513" top="47" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>swaggeroauthjs</Name>
+        <Access>Public</Access>
+        <Location left="567" top="111" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>underscoreminjs</Name>
+        <Access>Public</Access>
+        <Location left="606" top="177" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships />
+  </ProjectItem>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>swaggerlibshared</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>contentjs</Name>
+        <Access>Public</Access>
+        <Location left="113" top="53" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships />
+  </ProjectItem>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>Server</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>Server</Name>
+        <Access>Public</Access>
+        <Location left="85" top="53" />
+        <Size width="354" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">string name = ComeNRead API</Member>
+        <Member type="Field">string version = 2.0.0</Member>
+        <Member type="Field">Port port = 9000</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships />
+  </ProjectItem>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>Database</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>Database</Name>
+        <Access>Public</Access>
+        <Location left="91" top="46" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">URL host = mongodb://localhost</Member>
+        <Member type="Field">string dbanme = comenread</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships />
+  </ProjectItem>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>Port</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>Port</Name>
+        <Access>Public</Access>
+        <Location left="154" top="32" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">string number</Member>
+        <Member type="Field">string name</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships />
+  </ProjectItem>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>URL</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>URL</Name>
+        <Access>Public</Access>
+        <Location left="164" top="63" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">string url</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships />
+  </ProjectItem>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>controller</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>controller</Name>
+        <Access>Public</Access>
+        <Location left="35" top="50" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships />
+  </ProjectItem>
+</Project>

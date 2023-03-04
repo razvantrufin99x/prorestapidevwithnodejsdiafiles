@@ -1,0 +1,511 @@
+config/default.json
+
+secretKey
+env
+server
+ name
+ version
+ port
+database
+ host
+ dbname
+
+
+controllers/
+
+ authors.js
+  BaseController:basecontroller
+  swagger:swagger-node-restify
+  BookSales : BaseController
+   set lib
+   construct(lib) 
+    seteaza lib
+   queryAuthors(res,next,criteria,bookIds)
+    seteaza criteria.books=bookIds
+    seteaza lib.db.model('Author') daca nu error
+    writeHAL(res,author)
+   list(req,res,next)
+    set criteria
+    seteaza name si descriptio in criteria.or = RegExp(req.params.q)
+    set filterByGenre = false || req.params.genre
+    filtreza dupa gen
+     lib.logger.debug
+     lib.db.model('Book')
+     find genre
+     queryAuthors(res,next,criteria,_.pluck(book,'id')) sau error
+   details(req,res,next)
+    set id = req.param.id
+    lib.db.model('Author')
+     findOne (id) or error else writeHAL(res,author)
+    create(req,res,next)
+     set body=req.body
+     newAuthor.save sau error 
+     newAuthor=lib.db.model('Author')(body) and writeHAL(res,author)
+     or error
+    update(req,res,next)
+     set data = req.body
+     set id = req.param.id
+     lib.db.model("Author").findOne(id) 
+     cauta dupa id autorul
+     daca gaseste salveaza
+     autor=assign(author,data)
+     author.save() sau error
+     writeHAL(res,data) or error
+    authorBooks(req,res,next)
+     set id = req.param.id
+     cauta id
+     lib.db.model('Author')
+     findOne(id)
+     populate(books)
+     writeHAL(res,author,books) or error
+   exporta modulele
+    set controller = new BookSlaes(lib)
+    adaugaActiuni la controller 
+     list
+     details
+     create
+     update
+     authorBooks
+     functia ret controller   
+         
+ basecontrooler.js
+    requires restify,errors,halson,logger
+    BaseController
+     constructor
+     actions array
+     server = null
+     setUpActions adauga actiuni
+     addAction creaza actiuni lista
+     RESTError ret erori msg
+     writeHAL creaza o resursa json din object
+     exporta modulul BaseControl
+     
+ books.js
+    requires BaseController,swagger
+    Book:BaseController
+     constructor(lib)
+     mergeStores(list1,list2)
+      reduceMap into theMap cele doua liste
+      stores = storeMap1 + storeMap2 creaza o multime de store cu key unice
+     list 
+     details
+     create
+     bookAuthors
+     bookReviews
+     update
+     exporta modulele
+       
+    
+ bookssales.js
+      requires BaseController,swagger
+      BooksSales:BaseController
+      construct(lib)
+      list
+      create
+      exporta modulele
+        
+ clientreviews.js
+      requires BaseController,swagger
+      ClientReviews:BaseController
+      construct(lib)
+      create
+      exporta modulele
+      
+ clients.js
+      requires BaseController,swagger
+      Clients:BaseController
+      construct(lib)
+      list
+      create
+      details
+      update
+      exporta modulele
+ 
+ employees.js
+      requires BaseController,swagger
+      Clients:BaseController
+      construct(lib)
+      list
+      create
+      details
+      update
+      exporta modulele
+      
+    
+ stores.js
+      requires BaseController,swagger
+      Store:BaseController
+      construct(lib)
+      list
+      details
+      storeBooks
+      storeEmployees
+      storeBooksales
+      create
+      update
+      exporta modulele
+
+
+ index.js
+      exporta modulele
+      
+      
+/lib/
+
+db.js
+    require config,_,mongoose
+    Schema = mongoose.Schema
+    obj = cachedModles, getModelFromSchema, model=models.mname
+    connect(cb)
+     mongoose.connect()
+     connection = mongoose.connection
+     connection.on(error,cb)
+     connection(open,cb)
+     obj.models =require ../models/ (obj)
+     module.export = obj
+    translateComplexType(v,strType)
+     tmp = null
+     type = strType || v['type']
+     switch(type)
+      array ... Schema.ObjectId || translateComplexType
+      object ...translateTypeTojs || SChema.ObjectId 
+    getModelFromSchema(schema)
+     data = schema.id, schema
+     newSchema
+     tmp  = null
+     _.each() 
+       Schema.Types.ObjectId
+       translateComplexType
+     data.Schema = new Schema(newSchema)
+     return daya
+    translateTypeToJs(t)
+     t = number
+     return eval(...)     
+     
+      
+helpers.js
+    require halson, config
+    module.export makeHAL, setupRoutes,validateKey
+    setupRoutes() 
+     controller.setUoActions()
+    validateKey()
+     key==777 ret true
+     hmac = require crypto.creatHmac
+     ret hmac==key
+    makeHAL()
+     obj = halson(data)
+      addLink()
+      addEmbed()
+      
+index.js
+    module.exports
+     helpers,loggermcontroller,schemas,schemaValidator,db
+     
+
+logger.js
+    require config
+    _ENV = process.env.NODE_ENV || config.get(env)
+    require winston for creareLogger, format, addColor, transports
+    combine, timestamp, label , printf, colorize = form 
+    myFormat = printf() return info.timestamp, .label , .level , .message
+    myCustonLevels enums
+     levels dictionar
+     colors dcitionar
+    logger = createLogger
+     format = combine()
+      colorize, label, timestamp, myformat
+      levels = myCustonLeves.levels
+      transports = new transports.Console
+    addColors (myCustonLevels)
+    module.exports = logger 
+     
+schemaValidator.js
+    require tv4,tv4-formats,request_schemas
+    module.export 
+     validateRequest
+    validate()
+     addFormat
+     schemaKey req.route
+     actionKey req.reoute.name
+     mySchema = schemas.schemaKey.actionKey
+     myData
+     data=req.params
+     res = tv4.validateMultiple()
+     return res
+
+
+
+
+
+/models/
+
+author.js
+    require mongoose,mongoose-json-select,helpers
+    cauta books
+    ...
+    
+book.js
+    require mongoose,mongoose-json-select,helpers
+    cauta stores
+    cauta autori
+    ...
+
+booksale.js
+    require mongoose,mongoose-json-select,helpers
+    cauta book,store,employee,client
+    mapeaza 
+    ...
+    
+client.js
+    require mongoose,mongoose-json-select,helpers
+    ...
+    
+clientreview.js
+    require mongoose,mongoose-json-select,helpers
+    update id
+    addtoset id
+    post save
+    ...
+
+employee.js
+    require mongoose,mongoose-json-select,helpers
+    json = json,stringify
+    ...
+
+index.js
+    module.exports = (db)
+     Book,Booksale,Client,ClientReview,Employee,Atore,Authore
+
+store.js
+    require mongoose,mongoose-json-select,helpers
+    
+    module.export db
+    schema require ../schemas/store.js
+    modelDef = db.getModelFromSchema(schema)
+            .schema.plugin (jsonSelect,'-employees')
+            halObj = helpers.makeHAL(toJSON(),book,employees,bookssales)
+            daca employees>0 halObj.addEmbed(employees,employees.map,toHal())
+            return halOjb
+         return mongoose.model(modelDef.name,modelDef.schema);
+         
+         
+         
+/request_schemas/
+index.js
+    module.exports
+        booksales require booksale
+        
+
+booksales.js
+    module.exports
+        getbooksales
+            validate
+                object
+                    start_date
+                    end_date
+                    id    
+                        
+
+
+/samples/
+class-sample.js
+    AnotherClass
+    {
+        constructor(p1,p2)
+    }
+    SampleClass:AnotherClass
+    {
+        constructor(param1,param2)
+        param1 set
+        param2 set
+        param1 get
+        param2 get
+        get sum()
+        description return "string"
+
+    }
+
+
+
+calls
+ sampleObj = new SampleClass(1,2);
+ console.log(sampleObj.sum)
+ ...
+ 
+ 
+ /schemas/
+ 
+ author.js
+ 
+ Author 
+    name
+    description
+    books[ref items]
+    website
+    avatar
+    address
+  
+  Address
+   street
+   house_number
+   
+ book.js
+ 
+  Book
+    title
+    authors[ref Author]
+    isbn_code
+    stores[ref Store, copies]
+    genre
+    description
+    reviews[ref ClientReview]
+    price
+    
+  booksales.js
+   
+   Booksales
+     date
+     books[ref Book]
+     store ref Store
+     employee ref Employee
+     client ref Client
+     totalAmount 
+   
+ store.js
+   
+   Store
+      name
+      address
+      state
+      phone_numbers[string]
+      employees[ref Employee]
+   
+ client.js
+  
+  Client
+    name
+    address
+    phone_number
+    email
+    
+ clientreview.js
+ 
+   ClientReview
+    client ref Client
+    book ref Book
+    review_text
+    stars range(0,5)
+    
+    
+ employee.js
+ 
+  Employee
+    first_name
+    last_name
+    birthdate
+    address
+    phone_numbers[string]
+    email
+    hire_date
+    employee_number
+    
+
+ index.js
+   module.exports
+    BookSale, Book,Author,Store,Employee,Client,ClientReview
+
+
+/swagger-ui/
+
+index.html
+doctype
+html
+ head
+  title
+   link ref 
+        typography.css
+        reset.css
+        screen.css
+        
+   script 
+        lib/shared.bundle.js
+        lib/jquery,slideto,wiggle,ba-bbq,handlebars,underscore,backbone,swagger-client,swagger-ui,highlight,market
+        lib/swagger-oauth
+        
+   script
+        url = window.location.match()
+          daca url>1 decodeURIComponent()
+          altfel url = localhost:9000/api-docs
+          
+          window.swaggerUi = new swaggerUi()
+           url
+           dom-id
+           supportedSubmitMethods = []
+           onComplete(swaggerApi,swaggerUi){
+            daca initiOAuth==function
+             initOAuth(clientId,realm,appName)
+           }     
+           hljs.highlightBlock()
+           onFailure(data)
+           docExpansion = none
+           sorter = alpha
+           addApiKeyAuthorization()
+            window.authorizations.add
+           input.schange()
+                addApiKeyAuthorization
+           apiKey=777
+           input_apiKey.val(apiKey)
+                addApiKeyAuthorization
+           window.swaggerUi.load()
+           
+    body class swagger-section
+     div id header
+      div class swagger-ui-wrap
+       a id=logo
+       form id api_selector
+        div input_baseUrl
+        div input_api_key
+        div 
+          a id=explore
+     div class swagger-ui-wrap id message-bar
+     div class swagger-ui-wrap id swagger-ui-container     
+
+
+
+
+o2c.html
+
+qp = windows.location.hash.substring || windows.location.search.substring
+JSON.parse().replace;
+ return keyy==value:decodeURIComponent(value)
+ 
+ window.opener.swaggerUI.tokenUrl
+ window.opener.processOAuthCode(qp)
+ window.opener.onOAuthComplete(qp)
+ window.close
+ 
+ 
+
+/root/
+
+index.js
+
+ require restify, resitfy.plugins,colors,lib,swagger-node-restify,config 
+ server = restitfy.createServer()
+ server.use(restify.plugins.bodyParser())
+ restify.defaultResponseHeader = header()
+ server.use() lib.helpers.validateKey()
+ server.use() schemaValidator.validateRequest()
+ serger.get(restify.plugins.serverStatic())
+ directory:__dirname
+ default index.html
+ swagger.addModels(lib.schemas)
+ swagger.setAppHandler(server)
+ lib.helpers.setupRoutes(server, swagger, lib)
+ swagger.configureSwaggerPaths("")
+ swagger.configure("path:port")
+ server.listen()
+    config.get(server.port)
+    lib.logger,info()
+    lib.db.connect() or error 
+ 

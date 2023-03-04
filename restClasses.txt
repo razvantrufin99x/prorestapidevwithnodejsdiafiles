@@ -1,0 +1,2818 @@
+
+
+public class Client{}
+public class Machine{}
+public class Server{}
+
+public class Comunication{}
+
+public class Request{}
+
+public class state{}
+public class constraint{}
+public class stateless{}
+
+public class information{}
+
+public class Cache{}
+
+public class interface{}
+public class Uniform:interface{}
+
+public class interact{}
+
+public class Architecture{}
+public class Diagram{}
+
+public class ClientServer:Architecture{}
+public class ClientStatelessCacheServer:Architecture{}
+
+public class System{}
+public class Layer{}
+public class LayeredSystem{}
+
+public class BussinessLogic:Layer{}
+public class SessionInformation:Layer{}
+public class Storage:Layer{}
+
+public class Multilayered:Architecture{}
+
+execute
+codeondemand
+run
+clienttype
+support
+donotsupport
+
+resource
+
+representation
+binary
+json
+xml
+
+identifier
+url
+
+metadata
+contenttype
+
+controldata
+cachecontrol
+
+
+contentnegociation
+
+file
+fileextension
+
+actions
+
+get
+post
+put
+delete
+head
+options
+
+complexactions
+crud
+
+api
+nodejs
+
+hypermedia
+engineofapplicationstate
+hateoas
+
+restfull
+
+
+response
+
+mainentrypoint
+entrypoint
+root
+
+
+hypertextapplicationlanguage
+hal
+
+code
+statuscode
+meaning
+
+protocol
+
+
+com
+corba
+omg 
+rmi
+rpc
+html
+xmlrpc
+
+
+xmlrpc:architecture{}
+clientsidecode
+message
+via
+serversidecode
+
+soap
+
+envelop
+
+header
+block
+reservation
+passenger
+
+body
+subelement
+itinerary
+logging
+
+wsdl
+
+
+restapi
+
+ftp 
+html
+ssh 
+
+endpoints
+accesspoint
+
+uniforminterface
+
+transportlanguage
+xml 
+json 
+
+
+datatransferformat
+dx 
+
+
+versions
+documentation 
+errorhandling
+
+development
+client 
+enduser 
+sdk 
+library
+
+android
+js
+php 
+unity 
+ios 
+web 
+java 
+asp 
+c++ 
+clojure 
+dotnet 
+go 
+aws 
+service 
+ruby 
+github 
+
+companies
+company 
+facebook 
+google 
+twitter 
+amazon 
+
+security 
+authentication
+authorization
+
+restfullsystem
+stateless 
+https 
+
+accessingthesystem
+tsl
+digest
+auth
+oauth
+
+
+
+
+comunicationbetweenclientandserver
+
+basic auth
+apiclient
+client send get 
+server send back unauthorized
+client get again 
+client send to servr autorization
+apiserver
+
+digest auth
+nounce:string
+opaque:string 
+qop:event
+algorithm:string 
+
+username 
+uri 
+response 
+md5 
+ha2 
+
+oauth1
+
+clientapp
+user 
+server
+serviceprovider
+
+client request token 
+server grant request token 
+client direct user to sp 
+server obtain user authorization 
+server direct user to consumer 
+client request access token 
+server grant access token 
+client access protected resource 
+
+oauth2
+
+ssl 
+tsl 
+signatures 
+
+
+stateless alternative 
+restfull api 
+mac 
+message auth code 
+
+client 
+message to be sent 
+mac algo 
+message sent 
+mac 
+server 
+orginial mess 
+mac algo 
+new mac 
+=?
+mac 
+zero storage 
+
+
+scalability
+
+internet 
+all your clients 
+api server 
+the application 
+database sever 
+monolothic:architecture{}
+
+
+internet 
+all your clients 
+main content api 
+session api  
+3rd parti auth service 
+auth api 
+the application 
+db layer api 
+database sever 
+distributed:architecture{}
+
+
+
+
+sample 
+bookstore 
+
+book 
+clients 
+users 
+purchases 
+
+developer experince dx 
+
+nodejs
+rest
+framework
+rubyonrails
+laravel
+symfony
+expressjs
+django
+
+javascript
+api
+google
+
+async
+programming
+asyncio
+io
+simplicity
+server
+mongodb
+integration
+json
+jsonbaseservice
+npm
+
+
+async
+flow
+callback
+instruction
+instructionlist
+longtimerunninginstruction
+return
+
+debug
+
+file
+read
+fs
+ readFileSync
+ readFile
+console 
+ log
+ 
+var 
+ 
+content
+function
+ shift
+
+parallelflow
+serialflow
+
+parallel
+funcs
+ forEach
+ length
+ setTimeout
+result
+ push
+ render
+
+db
+ query
+services
+ bookNews
+  getThisWeekNews
+ logging
+  logRequest
+    
+async.js
+
+
+
+asyncio
+ event loop orchestrates the execution of the code
+ :
+ requests
+ eventloop
+ singlethread
+ register callback
+ filesystem
+ database
+ processing
+ operation finished
+ trigger callback
+ 
+ 
+ async
+ sync
+ 
+ vaticanjs
+ 
+ module
+  esport
+   AsyncHdlr
+    prototype
+     index
+     res
+      send
+ this
+  model
+  
+  SyncHdlr
+   
+   
+   
+   Simplicity
+   
+   require
+   http
+    createServer
+    listen
+    
+    Dynamic Typing
+    
+    
+    
+    oop
+    
+    
+    prototypal inheritage
+    Class
+     prototype
+     
+     
+functional programming support
+
+map
+
+init
+ push
+fn
+ apply
+list
+ slice
+ 
+ 
+ 
+ duck typing
+ 
+ json native support
+ 
+ npm
+ npmjs
+ 
+ 
+ curl
+ sh
+ npm install
+ npm publish
+ 
+ 
+ paypal
+ ebay
+ linkedln
+ netflix
+ yahoo
+ 
+ architecting a rest api 
+mvc
+requesthandler
+middleware preprocess chain
+routes handler
+controller
+model
+represenation layer
+response handler
+
+restfull system
+
+gather http header
+doby of request
+parse
+provide request object
+
+communicate with preprocessing and chain module and routes handler and select controller to be executed
+
+create response object to write a response back to client
+
+
+path : client 2 internet 2 request handler 2 preprocessing chain 2 back 2 routes handler
+
+
+client app  2 request 4 resource
+request hander gather infos 
+create request obj and pass it along pre processing chain
+preprocessing chain return the request object with the changes 2 request handler
+rh sends request and response ojbects 2 routes handler ....continuare
+
+handler register callback 2 preprocessing chain
+preprocessing chain send a instant return for next request 2 request handler
+trigger callback from preprocessing chain 2 routes handler
+
+changes on architecture to provide room for multiple pre processing chains
+
+handler register callbakcs to preprocessing chains multiple who trugger callbak to controller
+handler find router controller 2 routes handler
+
+
+mvc sau model view controller 
+
+
+business logic encapsulated in component known as models a resources of system handles
+orchstreation controller take care of when the models job is done
+representation layer handle visual repre of info
+
+interactions between the layers
+
+client reuquest 2 controller 2(ochestration) model 2(data to render) view back to client sa render resource
+
+mvc web
+
+model 2(orchestr) controller 2(sets formst to render sends data to render) view 
+
+
+mvc pattern
+
+reqh 2(find route controller) routh
+routh 2 reqh back
+reqObjs from routh 2 (register callback) preprocessing chains
+pchain 2(trigger callback) controller
+ctrl 2(orchest) model(resource) 
+ctrl 2(set format to render send data 2 render) view 
+
+view layer
+
+ctrl 2(set format to render send data 2 render) view layer
+
+alternative mvc
+
+hierarchical mvc
+blog post
+client
+request
+bpctrl
+render bp
+response2user
+prctrl laod post comments coment model
+bpctrl load blog post 2 bp model
+we dont want this 
+
+
+hierarchical mvc 2ok
+blog post
+client
+request
+bpctrl
+render bp post
+response2user layer view
+layer view 2 bp ctrl sends comment back to request
+prctrl 2 coment contrl
+comt ctrl render the comments to view layer
+bpctrl load blog post 2 bp model
+cmt ctrl load post comments 2 comments model
+cmt ctrl render the comments t view layer
+
+mvvm model view viewmodel
+
+view            to:from         viewmodel               to from     model
+presentation    databinding     presentation logic                  business logic
+
+mva model view adapter
+
+
+view            to from         adapter               to from        model
+presentation                  business logic                        data
+
+response handler
+
+cacheable
+content tyoe
+status
+date
+content legth
+
+
+http repsponse with json repre of a resource
+
+page 78 antire architecture rest api
+
+reponse handler added from view layer to internet 2 client back
+
+working with modules 
+
+
+http request
+http response
+handling
+
+route handling
+preprocessing chain middleware
+uptodate docu
+hypermedia on the response hal
+response and request format validation
+
+http protocol on nodejs
+
+listen port traffic http
+translate http mesgs into js
+write http response with format
+
+
+connect package npmj
+
+module
+hapijs
+expressjs
+node-restify
+
+
+versioning routes
+content negociation
+
+vatican.js
+port
+handler
+db
+cors
+
+swagger-node-express
+model
+aplication
+module dependencies
+
+
+iodocs
+
+halson
+
+hal
+
+json-gate
+schema
+
+
+tv4
+validator
+schema
+
+
+planning your rest api
+
+rest
+restfull architecture
+good practice
+modules
+
+solve a problem
+specifications list
+resource list
+endpoints
+uml diagram of the system
+db engine
+
+problem
+bookstore
+records reports store
+crm format
+inventory of the chain wide matters 
+per store and global stock
+employee
+phone nr
+address
+web site
+interaction
+
+location map of stores
+bond between stores
+backbone of everything api
+decentralisation system
+common set of tools 
+data source
+client app
+cross store search
+auto ctrl global stock
+auto ctrl over sales on global level
+dynamic data source for things like web sites and mobile apps
+
+develop ai system
+dinamic web sites
+mobile apps client
+customer interactions
+
+specifications
+situation of the chain of system
+hard specifications
+system evolve and help planning the dev
+better idea of the size of the project
+design errors
+implementation
+
+
+features provided
+cross store book search list capabilities
+storage info of entities
+sales in store and online sale
+review of books interaction between store and clients
+auth employee and customers
+
+
+Table 6-1. Resources, Properties, and Basic Descriptions
+Resource
+Properties
+Description
+Books
+• Title
+• Authors
+• ISBN Code
+• Stores
+• Genre
+• Description
+• Reviews
+• Price
+This is the main entity; it has all the
+properties required to identify a book and
+to locate it in a specific store.
+Authors
+• Name
+• Description
+• Books
+• Website
+• Image/Avatar
+This resource is highly related to a book’s
+resource because it lists the author of
+every book in a store.
+Stores
+• Name
+• Address
+• State
+• Phone numbers
+• Employees
+Basic information about each store,
+including the address, employees, and so
+forth.
+Employees
+• First name
+• Last name
+• Birthdate
+• Address
+• Phone numbers
+• Email
+• HireDate
+• EmployeeNumber
+• Store
+Employee information, contact data, and
+other internal properties that may come in
+handy for an admin type of user.
+Clients
+• Name
+• Address
+• Phone number
+• Email
+Basic contact information about a client.
+BookSales
+• Date
+• Books
+• Store
+• Employee
+• Client
+• TotalAmount
+The record of a book sale. It can be related
+to a store sale or an online sale.
+esource
+Properties
+Description
+ClientReviews
+• Client
+• Book
+• ReviewText
+• Stars
+The resource in which client reviews
+about a book is saved. The client can enter
+a short free-text review and a number
+between 0 and 5 to represent stars.
+
+
+Table 6-2. List of Endpoints, Associated Parameters, and HTTP Methods
+Endpoint
+Attributes
+Method
+Description
+/books
+q : Optional search term.
+genre : Optional filtering
+by book genre. Defaults
+to “all”.
+GET
+Lists and searches all books. If the q
+parameter is present, it’s used as a free-
+text search; otherwise, the endpoint can
+be used to return lists of books by genre.
+/books
+POST
+Creates a new book and saves it in the
+database.
+/books/:id
+GET
+Returns information about a specific book.
+/books/:id
+PUT
+Updates the information on a book.
+/books/:id/authors
+GET
+Returns the author(s) of a specific book.
+/books/:id/reviews
+GET
+Returns user reviews for a specific book.
+/authors
+genre : Optional; defaults
+to “all”.
+q : Optional search term.
+GET
+Returns a list of authors. If genre is
+present, it’s used to filter by the type of
+book published. If q is present, it’s used
+to do a free- text search on the author’s
+information.
+/authors
+POST
+Adds a new author.
+/authors/:id
+PUT
+Updates the data on a specific author.
+/authors/:id
+GET
+Returns the data on a specific author.
+/authors/:id/books
+GET
+Returns a list of books written by a specific
+author.
+/stores
+state : Optional; filters
+the list of stores by state
+name.
+GET
+Returns the list of stores.
+Endpoint
+Attributes
+Method
+Description
+/stores
+POST
+Adds a new store to the system.
+/stores/:id
+GET
+Returns the data on a specific store.
+/stores/:id/books
+q : Optional; does a
+full-text search of books
+within a specific store.
+genre : Optional; filters
+the results by genre.
+GET
+Returns a list of books that are in stock at
+a specific store. If the attribute q is used, it
+performs a full-text search on those books.
+/stores/:id/
+employees
+GET
+Returns a list of the employees working at
+a specific store.
+/stores/:id/
+booksales
+GET
+Returns a list of the sales at a specific store.
+/stores/:id
+PUT
+Updates the information about a specific
+store.
+/employees
+GET
+Returns a full list of the employees
+working across all stores.
+/employees
+POST
+Adds a new employee to the system.
+/employees/:id
+GET
+Returns the data on a specific employee.
+/employees/:id
+PUT
+Updates the data on a specific employee.
+/clients
+GET
+Lists clients ordered alphabetically by
+name.
+/clients
+POST
+Adds a new client to the system.
+/clients/:id
+GET
+Returns the data on a specific client.
+/clients/:id
+PUT
+Updates the data on a specific client.
+/booksales
+start_date : Filters
+records that were created
+after this date.
+end_date : Optional;
+filters records that were
+created before this date.
+store_id : Optional;
+filters records by store.
+GET
+Returns a list of sales. The results can be
+filtered by time range or by store.
+/booksales
+POST
+Records a new book sale.
+/clientreviews
+POST
+Saves a new client review of a book.
+
+size of project
+amount of work
+mac auth request 
+server will re create hat code to verify request is valid
+signing process embedded int osystem
+
+keeping track of stock per store
+
+uml diagram
+page 118
+clase
+booksale
+employee
+store
+clientreview
+client
+bookstore
+book
+author
+
+database storage system
+speed
+easy to change schema
+ability to handle enetity relations
+seamless integration between the entities code and db representation of the data
+
+pick db
+mysql
+postgresql
+mongodb
+
+fast integration
+orm object relational mapping
+mongodb and mongoose.js
+
+easy to change schemas
+sequelizejs
+nosql
+
+ability to handle entity relations
+
+seamless integration between out model and the database entities
+mongodb and mongoose with sequqlizejs
+
+
+
+
+module 
+redis.io
+
+
+
+restfull system
+restify handle and process request
+swagger documentation
+swagger-node-restify
+swagger-node-express
+autogenerate docu
+halson hal hypermedia reponse
+json tv4 validation
+
+
+npmjs
+
+
+
+developing your rest api
+
+tools defined
+project
+develop
+coding
+
+file tree organiz
+dir structure
+
+small design decision
+
+parts
+
+json schema
+models
+
+minor simplifications
+
+diagram
+
+change of plan
+wrong planning
+
+stage
+
+design phase
+
+talking
+
+write detailed use cases with correspond edge conditions
+flow chart
+the work
+
+process
+
+team
+
+right
+implementation
+solution
+
+develop
+
+
+simplification of the store
+employee relationship
+employee list on a store
+
+list of employee
+
+addign swapper ui
+swagger-ui
+
+simplified security
+public api
+client api 
+control
+
+access token request with a limited life span
+passphrase shared
+mac code encrypted used passphrase
+api will rehash each request for mathing
+validatind requests to rest 
+methode is stateless
+simplifying add of a new client of app
+
+each client send on request
+ header hmcdata encrypted
+ api key params with the encryption result
+ 
+ api will encrypt again the data from user using correct passphrase
+ if the results match request is authentic 
+ other wise code 401 error reject
+ 
+ small backdoor for swagger
+ swagger will not need auth each request
+ ui can send fixed api_key 
+ key 777 of request will pass as ok
+ this will be corrected in production
+ 
+ mvc
+ hierachicak mvc
+ basic
+ 
+ controller handle request and calls uppon model for further action
+ models holds main logic of api
+  query db
+  model mongoose
+  simp architecture
+  mechanisms to add extra behaviors to model
+   setting instance methods
+   post action hooks
+  view emmbed model code in a form of a method that translate specific of one model into hal+json that can be returned to client
+  
+  folder structure
+  design api
+  
+  comenread
+   controllers
+   lib
+   models
+   nodemodules
+   requestschemas
+   schemas
+   sqaggerui
+   index.js
+   package.json
+   
+   controllers index.js
+   lib misc code db access, helper func, config
+   models model files mongoose schema definition  
+   reuqestschemas json schemas vlidate diff request
+   schemas json schemas of models used by swagger module define ui for testing and for mangoose model definition
+    translate code to letter format
+   swaggerui index.html
+   
+   
+
+/controllers/index.js
+module.exports = {
+BookSales: require("./booksales"),
+Stores: require("./stores"),
+Employees: require("./employees"),
+ClientReviews: require("./clientreviews"),
+Clients: require("./clients"),
+Books: require("./books"),
+Authors: require("./authors")
+}
+
+var controllers = require("/controllers")
+
+
+/controllers/basecontroller.js
+var _ = require("underscore"),
+restify = require("restify"),
+colors = require("colors"),
+halson = require("halson")
+function BaseController() {
+this.actions = []
+this.server = null
+}
+BaseController.prototype.setUpActions = function(app, sw) {
+this.server = app
+_.each(this.actions, function(act) {
+var method = act['spec']['method']
+//a bit of a logging message, to help us understand what’s going on
+under the hood
+console.log("Setting up auto-doc for (", method, ") - ", act['spec']
+['nickname'])
+sw['add' + method](act)
+app[method.toLowerCase()](act['spec']['path'], act['action'])
+})
+}
+BaseController.prototype.addAction = function(spec, fn) {
+var newAct = {
+'spec': spec,
+action: fn
+}
+this.actions.push(newAct)
+}
+BaseController.prototype.RESTError = function(type, msg) {
+if(restify[type]) {
+return new restify[type](msg.toString())
+} else {
+console.log("Type " + type + " of error not found".red)
+}
+}
+/**
+Takes care of calling the "toHAL" method on every resource before writing it
+back to the client
+*/
+BaseController.prototype.writeHAL = function(res, obj) {
+if(Array.isArray(obj)) {
+var newArr = []
+_.each(obj, function(item, k) {
+item = item.toHAL()
+newArr.push(item)
+})
+obj = halson (newArr)
+} else {
+if(obj && obj.toHAL)
+obj = obj.toHAL()
+}
+if(!obj) {
+obj = {}
+}
+res.json(obj)
+}
+module.exports = BaseController
+
+//prototype inheritance
+//setupactions routes to http server
+//addaction create docu by swagger
+//resterror wrapper error methods provided by restify
+//writehal calls model to render collections of simple objects 
+
+
+
+/controllers/books.js
+var BaseController = require("./basecontroller"),
+_ = require("underscore"),
+swagger = require("swagger-node-restify")
+function Books() {
+}
+Books.prototype = new BaseController()
+module.exports = function(lib) {
+var controller = new Books();
+/**
+Helper function for the POST action
+*/
+function mergeStores(list1, list2) {
+var stores1 = {}
+var stores2 = {}
+_.each(list1, function(st) {
+if(st.store)
+stores1[st.store] = st.copies
+})
+_.each(list2, function(st) {
+if(st.store)
+stores2[st.store] = st.copies
+})
+var stores = _.extend(stores1, stores2)
+return _.map(stores, function(v, k) {
+return {store: k, copies: v}
+})
+}
+controller.addAction({
+'path': '/books',
+'method': 'GET',
+'summary': 'Returns the list of books',
+"params": [ swagger.queryParam('q', 'Search term', 'string'), swagger.
+queryParam('genre','Filter by genre', 'string')],
+'responseClass': 'Book',
+'nickname': 'getBooks'
+}, function(req, res, next) {
+var criteria = {}
+if(req.params.q) {
+var expr = new RegExp('.*' + req.params.q + '.*')
+criteria.$or = [
+{title: expr},
+{isbn_code: expr},
+{description: expr}
+]
+}
+if(req.params.genre) {
+criteria.genre = req.params.genre
+}
+lib.db.model('Book')
+.find(criteria)
+.populate('stores.store')
+.exec(function(err, books) {
+if(err) return next(err)
+controller.writeHAL(res, books)
+})
+})
+controller.addAction({
+'path': '/books/{id}',
+'method': 'GET',
+'params': [ swagger.pathParam('id', 'The Id of the book','int') ],
+'summary': 'Returns the full data of a book',
+'nickname': 'getBook'
+}, function(req, res, next) {
+var id = req.params.id
+if(id) {
+lib.db.model("Book")
+.findOne({_id: id})
+.populate('authors')
+.populate('stores')
+.populate('reviews')
+.exec(function(err, book) {
+if(err) return next(controller.RESTError('InternalServerError', err))
+if(!book) {
+return next(controller.RESTError('ResourceNotFoundError', 'Book not
+found'))
+}
+controller.writeHAL(res, book)
+})
+} else {
+next(controller.RESTError('InvalidArgumentError', 'Missing book id'))
+}
+})
+controller.addAction({
+'path': '/books',
+'method': 'POST',
+'params': [ swagger.bodyParam('book', 'JSON representation of the new
+book','string') ],
+'summary': 'Adds a new book into the collectoin',
+'nickname': 'newBook'
+}, function(req, res, next) {
+var bookData = req.body
+if(bookData) {
+isbn = bookData.isbn_code
+lib.db.model("Book")
+.findOne({isbn_code: isbn})
+.exec(function(err, bookModel) {
+if(!bookModel) {
+bookModel = lib.db.model("Book")(bookData)
+} else {
+bookModel.stores = mergeStores(bookModel.stores, bookData.stores)
+}
+bookModel.save(function(err, book) {
+if(err) return next(controller.RESTError('InternalServerError', err))
+controller.writeHAL(res, book)
+})
+})
+} else {
+next(controller.RESTError('InvalidArgumentError', 'Missing content of book'))
+}
+})
+controller.addAction({
+'path': '/books/{id}/authors',
+'method': 'GET',
+'params': [ swagger.pathParam('id', 'The Id of the book','int') ],
+'summary': 'Returns the list of authors of one specific book',
+'nickname': 'getBooksAuthors'
+}, function(req, res, next) {
+var id = req.params.id
+if(id) {
+lib.db.model("Book")
+.findOne({_id: id})
+.populate('authors')
+.exec(function(err, book) {
+if(err) return next(controller.RESTError('InternalServerError', err))
+if(!book) {
+return next(controller.RESTError('ResourceNotFoundError', 'Book not
+found'))
+}
+controller.writeHAL(res, book.authors)
+})
+} else {
+next(controller.RESTError('InvalidArgumentError', 'Missing book id'))
+}
+})
+controller.addAction({
+'path': '/books/{id}/reviews',
+'method': 'GET',
+'params': [ swagger.pathParam('id', 'The Id of the book','int') ],
+'summary': 'Returns the list of reviews of one specific book',
+'nickname': 'getBooksReviews'
+}, function(req, res,next) {
+var id = req.params.id
+if(id) {
+lib.db.model("Book")
+.findOne({_id: id})
+.populate('reviews')
+.exec(function(err, book) {
+if(err) return next(controller.RESTError('InternalServerError', err))
+if(!book) {
+return next(controller.RESTError('ResourceNotFoundError', 'Book not
+found'))
+}
+controller.writeHAL(res, book.reviews)
+})
+} else {
+next(controller.RESTError('InvalidArgumentError', 'Missing book id'))
+}
+})
+controller.addAction({
+'path': '/books/{id}',
+'method': 'PUT',
+'params': [ swagger.pathParam('id', 'The Id of the book to update','string'),
+swagger.bodyParam('book', 'The data to change on the book',
+'string') ],
+'summary': 'Updates the information of one specific book',
+'nickname': 'updateBook'
+}, function(req, res, next) {
+var data = req.body
+var id = req.params.id
+if(id) {
+lib.db.model("Book").findOne({_id: id}).exec(function(err, book) {
+if(err) return next(controller.RESTError('InternalServerError', err))
+if(!book) return next(controller.RESTError('ResourceNotFoundError',
+'Book not found'))
+book = _.extend(book, data)
+book.save(function(err, data) {
+if(err) return next(controller.RESTError('InternalServerError', err))
+controller.writeHAL(res, data.toJSON())
+})
+})
+} else {
+next(controller.RESTError('InvalidArgumentError', 'Invalid id received'))
+}
+})
+return controller
+}
+
+var controller = require("/controllers/books.js")(lib)
+
+
+/controllers/stores.js
+var BaseController = require("./basecontroller"),
+_ = require("underscore"),
+swagger = require("swagger-node-restify")
+function Stores() {
+}
+Stores.prototype = new BaseController()
+module.exports = function(lib) {
+var controller = new Stores();
+controller.addAction({
+'path': '/stores',
+'method': 'GET',
+'summary': 'Returns the list of stores ',
+'params': [swagger.queryParam('state', 'Filter the list of stores by state',
+'string')],
+'responseClass': 'Store',
+'nickname': 'getStores'
+}, function (req, res, next) {
+var criteria = {}
+if(req.params.state) {
+criteria.state = new RegExp(req.params.state,'i')
+}
+lib.db.model('Store')
+.find(criteria)
+.exec(function(err, list) {
+if(err) return next(controller.RESTError('InternalServerError', err))
+controller.writeHAL(res, list)
+})
+})
+controller.addAction({
+'path': '/stores/{id}',
+'method': 'GET',
+'params': [swagger.pathParam('id','The id of the store','string')],
+'summary': 'Returns the data of a store',
+'responseClass': 'Store',
+'nickname': 'getStore'
+}, function(req, res, next) {
+var id = req.params.id
+if(id) {
+lib.db.model('Store')
+.findOne({_id: id})
+.populate('employees')
+.exec(function(err, data) {
+if(err) return next(controller.RESTError('InternalServerError', err))
+if(!data) return next(controller.RESTError('ResourceNotFoundError', 'Store
+not found'))
+controller.writeHAL(res, data)
+})
+
+} else {
+next(controller.RESTError('InvalidArgumentError', 'Invalid id'))
+}
+})
+controller.addAction({
+'path': '/stores/{id}/books',
+'method': 'GET',
+'params': [swagger.pathParam('id','The id of the store','string'),
+swagger.queryParam('q', 'Search parameter for the books', 'string'),
+swagger.queryParam('genre', 'Filter results by genre', 'string')],
+'summary': 'Returns the list of books of a store',
+'responseClass': 'Book',
+'nickname': 'getStoresBooks'
+}, function (req, res, next) {
+var id = req.params.id
+if(id) {
+var criteria = {stores: id}
+if(req.params.q) {
+var expr = new RegExp('.*' + req.params.q + '.*', 'i')
+criteria.$or = [
+{title: expr},
+{isbn_code: expr},
+{description: expr}
+]
+}
+if(req.params.genre) {
+criteria.genre = req.params.genre
+}
+//even though this is the stores controller, we deal directly with books here
+lib.db.model('Book')
+.find(criteria)
+.populate('authors')
+.exec(function(err, data) {
+if(err) return next(controller.RESTError('InternalServerError', err))
+controller.writeHAL(res, data)
+})
+} else {
+next(controller.RESTError('InvalidArgumentError', 'Invalid id'))
+}
+})
+controller.addAction({
+'path': '/stores/{id}/employees',
+'method': 'GET',
+'params': [swagger.pathParam('id','The id of the store','string')],
+'summary': 'Returns the list of employees working on a store',
+'responseClass': 'Employee',
+'nickname': 'getStoresEmployees'
+}, function (req, res, next) {
+var id = req.params.id
+if(id) {
+lib.db.model('Store')
+.findOne({_id: id})
+.populate('employees')
+.exec(function(err, data) {
+if(err) return next(controller.RESTError('InternalServerError', err))
+if(!data) {
+return next(controller.RESTError('ResourceNotFoundError', 'Store not
+found'))
+}
+console.log(data)
+controller.writeHAL(res, data.employees)
+})
+} else {
+next(controller.RESTError('InvalidArgumentError', 'Invalid id'))
+}
+})
+controller.addAction({
+'path': '/stores/{id}/booksales',
+'method': 'GET',
+'params': [swagger.pathParam('id','The id of the store','string')],
+'summary': 'Returns the list of booksales done on a store',
+'responseClass': 'BookSale',
+'nickname': 'getStoresBookSales'
+}, function (req, res, next) {
+var id = req.params.id
+if(id) {
+//even though this is the stores controller, we deal directly with booksales here
+lib.db.model('Booksale')
+.find({store: id})
+.populate('client')
+.populate('employee')
+.populate('books')
+.exec(function(err, data) {
+if(err) return next(controller.RESTError('InternalServerError', err))
+controller.writeHAL(res, data)
+})
+} else {
+next(controller.RESTError('InvalidArgumentError', 'Invalid id'))
+}
+})
+controller.addAction({
+'path': '/stores',
+'method': 'POST',
+'summary': 'Adds a new store to the list',
+'params': [swagger.bodyParam('store', 'The JSON data of the store', 'string')],
+'responseClass': 'Store',
+'nickname': 'newStore'
+}, function (req, res, next) {
+var data = req.body
+if(data) {
+var newStore = lib.db.model('Store')(data)
+newStore.save(function(err, store) {
+if(err) return next(controller.RESTError('InternalServerErr
+or', err))
+res.json(controller.toHAL(store))
+})
+} else {
+next(controller.RESTError('InvalidArgumentError', 'No data
+received'))
+}
+})
+controller.addAction({
+'path': '/stores/{id}',
+'method': 'PUT',
+'summary': "UPDATES a store's information",
+'params': [swagger.pathParam('id','The id of the store','string'), swagger.
+bodyParam('store', 'The new information to update', 'string')],
+'responseClass': 'Store',
+'nickname': 'updateStore'
+}, function (req, res, next) {
+var data = req.body
+var id = req.params.id
+if(id) {
+lib.db.model("Store").findOne({_id: id}).exec(function(err, store) {
+if(err) return next(controller.RESTError('InternalServerErr
+or', err))
+if(!store) return next(controller.RESTError('ResourceNotFoundError', 'Store
+not found'))
+store = _.extend(store, data)
+store.save(function(err, data) {
+if(err) return next(controller.RESTError('InternalSer
+verError', err))
+res.json(controller.toHAL(data))
+})
+})
+} else {
+next(controller.RESTError('InvalidArgumentError', 'Invalid id
+received'))
+}
+})
+return controller
+}
+
+/controllers/authors.js
+var BaseController = require("./basecontroller"),
+swagger = require("swagger-node-restify")
+function BookSales() {
+}
+BookSales.prototype = new BaseController()
+module.exports = function(lib) {
+var controller = new BookSales()
+//list
+controller.addAction({
+'path': '/authors',
+'method': 'GET',
+'summary' :'Returns the list of authors across all stores',
+'params': [ swagger.queryParam('genre', 'Filter authors by genre of their
+books', 'string'),
+swagger.queryParam('q', 'Search parameter', 'string')],
+'responseClass': 'Author',
+'nickname': 'getAuthors'
+}, function(req, res, next) {
+var criteria = {}
+if(req.params.q) {
+var expr = new RegExp('.*' + req.params.q + '.*', 'i')
+criteria.$or = [
+{name: expr},
+{description: expr}
+]
+}
+var filterByGenre = false || req.params.genre
+if(filterByGenre) {
+lib.db.model('Book')
+.find({genre: filterByGenre})
+.exec(function(err, books) {
+if(err) return next(controller.RESTError('InternalServerErr
+or', err))
+findAuthors(_.pluck(books, '_id'))
+})
+} else {
+findAuthors()
+}
+function findAuthors(bookIds) {
+if(bookIds) {
+criteria.books = {$in: bookIds}
+}
+lib.db.model('Author')
+.find(criteria)
+.exec(function(err, authors) {
+if(err) return next(controller.RESTError('InternalSer
+verError', err))
+controller.writeHAL(res, authors)
+})
+}
+})
+//get
+controller.addAction({
+'path': '/authors/{id}',
+'summary': 'Returns all the data from one specific author',
+'method': 'GET',
+'responseClass': 'Author',
+'nickname': 'getAuthor'
+}, function (req, res, next) {
+var id = req.params.id
+if(id) {
+lib.db.model('Author')
+.findOne({_id: id})
+.exec(function(err, author) {
+if(err) return next(controller.RESTError('InternalSer
+verError', err))
+if(!author) {
+return next(controller.RESTError('ResourceNot
+FoundError', 'Author not found'))
+}
+controller.writeHAL(res, author)
+})
+} else {
+next(controller.RESTError('InvalidArgumentError', 'Missing author id'))
+}
+})
+//post
+controller.addAction({
+'path': '/authors',
+'summary': 'Adds a new author to the database',
+'method': 'POST',
+'params': [swagger.bodyParam('author', 'JSON representation of the data',
+'string')],
+'responseClass': 'Author',
+'nickname': 'addAuthor'
+}, function (req, res, next) {
+var body = req.body
+if(body) {
+var newAuthor = lib.db.model('Author')(body)
+newAuthor.save(function(err, author) {
+if(err) return next(controller.RESTError('InternalServerError', err))
+controller.writeHAL(res, author)
+})
+} else {
+next(controller.RESTError('InvalidArgumentError', 'Missing author id'))
+}
+})
+//put
+controller.addAction({
+'path': '/authors/{id}',
+'method': 'PUT',
+'summary': "UPDATES an author's information",
+'params': [swagger.pathParam('id','The id of the author','string'),
+swagger.bodyParam('author', 'The new information to
+update', 'string')],
+'responseClass': 'Author',
+'nickname': 'updateAuthor'
+}, function (req, res, next) {
+var data = req.body
+var id = req.params.id
+if(id) {
+lib.db.model("Author").findOne({_id: id}).exec(function(err, author) {
+if(err) return next(controller.RESTError('InternalServerError', err))
+if(!author) return next(controller.RESTError('ResourceNotFoundError',
+'Author not found'))
+author = _.extend(author, data)
+author.save(function(err, data) {
+if(err) return next(controller.RESTError('Int
+ernalServerError', err))
+res.json(controller.toHAL(data))
+})
+})
+} else {
+next(controller.RESTError('InvalidArgumentError', 'Invalid id
+received'))
+}
+})
+// /books
+controller.addAction({
+'path': '/authors/{id}/books',
+'summary': 'Returns the data from all the books of one specific author',
+'method': 'GET',
+'params': [ swagger.pathParam('id', 'The id of the author', 'string')],
+'responseClass': 'Book',
+'nickname': 'getAuthorsBooks'
+}, function (req, res, next) {
+var id = req.params.id
+if(id) {
+lib.db.model('Author')
+.findOne({_id: id})
+.populate('books')
+.exec(function(err, author) {
+if(err) return next(controller.RESTError('InternalSer
+verError', err))
+if(!author) {
+return next(controller.RESTError('ResourceNot
+FoundError', 'Author not found'))
+}
+controller.writeHAL(res, author.books)
+})
+} else {
+next(controller.RESTError('InvalidArgumentError', 'Missing author id'))
+}
+})
+return controller
+}
+/controllers/booksales.js
+var BaseController = require("./basecontroller"),
+swagger = require("swagger-node-restify")
+function BookSales() {
+}
+BookSales.prototype = new BaseController()
+module.exports = function(lib) {
+var controller = new BookSales();
+controller.addAction({
+'path': '/booksales',
+'method': 'GET',
+'summary': 'Returns the list of book sales',
+'params': [ swagger.queryParam('start_date', 'Filter sales done after (or on)
+this date', 'string'),
+swagger.queryParam('end_date', 'Filter sales done on or before
+this date', 'string'),
+swagger.queryParam('store_id', 'Filter sales done on this
+store', 'string')
+],
+'responseClass': 'BookSale',
+'nickname': 'getBookSales'
+}, function(req, res, next) {
+console.log(req)
+var criteria = {}
+if(req.params.start_date)
+criteria.date = {$gte: req.params.start_date}
+if(req.params.end_date)
+criteria.date = {$lte: req.params.end_date}
+if(req.params.store_id)
+criteria.store = req.params.store_id
+lib.db.model("Booksale")
+.find(criteria)
+.populate('books')
+.populate('client')
+.populate('employee')
+.populate('store')
+.exec(function(err, sales) {
+if(err) return next(controller.RESTError('InternalServerError', err))
+controller.writeHAL(res, sales)
+})
+})
+controller.addAction({
+'path': '/booksales',
+'method': 'POST',
+'params': [ swagger.bodyParam('booksale', 'JSON representation of the new
+booksale','string') ],
+'summary': 'Records a new booksale',
+'nickname': 'newBookSale'
+}, function(req, res, next) {
+var body = req.body
+if(body) {
+var newSale = lib.db.model("Booksale")(body)
+newSale.save(function(err, sale) {
+if(err) return next(controller.RESTError('InternalServerError', err))
+controller.writeHAL(res, sale)
+})
+} else {
+next(controller.RESTError('InvalidArgumentError', 'Missing json data'))
+}
+})
+return controller
+}
+/controllers/clientreviews.js
+var BaseController = require("./basecontroller"),
+_ = require("underscore"),
+swagger = require("swagger-node-restify")
+function ClientReviews() {
+}
+ClientReviews.prototype = new BaseController()
+module.exports = function(lib) {
+var controller = new ClientReviews();
+controller.addAction({
+'path': '/clientreviews',
+'method': 'POST',
+'summary': 'Adds a new client review to a book',
+'params': [swagger.bodyParam('review', 'The JSON representation of the
+review', 'string')],
+'responseClass': 'ClientReview',
+'nickname': 'addClientReview'
+}, function (req, res, next) {
+var body = req.body
+if(body) {
+var newReview = lib.db.model('ClientReview')(body)
+newReview.save(function (err, rev) {
+if(err) return next(controller.RESTError('InternalServerError', err))
+controller.writeHAL(res, rev)
+})
+}
+})
+return controller
+}
+/controllers/clients.js
+var BaseController = require("./basecontroller"),
+_ = require("underscore"),
+swagger = require("swagger-node-restify")
+function Clients() {
+}
+Clients.prototype = new BaseController()
+module.exports = function(lib) {
+var controller = new Clients();
+controller.addAction({
+'path': '/clients',
+'method': 'GET',
+'summary': 'Returns the list of clients ordered by name',
+'responsClass':'Client',
+'nickname': 'getClients'
+}, function(req, res, next) {
+lib.db.model('Client').find().sort('name').exec(function(err, clients) {
+if(err) return next(controller.RESTError('InternalServerError', err))
+controller.writeHAL(res, clients)
+})
+})
+controller.addAction({
+'path': '/clients',
+'method': 'POST',
+'params': [swagger.bodyParam('client', 'The JSON representation of the
+client', 'string')],
+'summary': 'Adds a new client to the database',
+'responsClass': 'Client',
+'nickname': 'addClient'
+}, function(req, res, next) {
+var newClient = req.body
+var newClientModel = lib.db.model('Client')(newClient)
+newClientModel.save(function(err, client) {
+if(err) return next(controller.RESTError('InternalServerError', err))
+controller.writeHAL(res, client)
+})
+})
+controller.addAction({
+'path': '/clients/{id}',
+'method': 'GET',
+'params': [swagger.pathParam('id', 'The id of the client', 'string')],
+'summary': 'Returns the data of one client',
+'responsClass': 'Client',
+'nickname': 'getClient'
+}, function (req, res, next) {
+var id = req.params.id
+if(id != null) {
+lib.db.model('Client').findOne({_id: id}).exec(function(err, client){
+if(err) return next(controller.RESTError('InternalServerError',err))
+if(!client) return next(controller.RESTError('ResourceNotFoundError', 'The
+client id cannot be found'))
+controller.writeHAL(res, client)
+})
+} else {
+next(controller.RESTError('InvalidArgumentError','Invalid client id'))
+}
+})
+controller.addAction({
+'path': '/clients/{id}',
+'method': 'PUT',
+'params': [swagger.pathParam('id', 'The id of the client', 'string'),
+swagger.bodyParam('client', 'The content to overwrite', 'string')],
+'summary': 'Updates the data of one client',
+'responsClass': 'Client',
+'nickname': 'updateClient'
+}, function (req, res, next) {
+var id = req.params.id
+if(!id) {
+return next(controller.RESTError('InvalidArgumentError','Invalid id'))
+} else {
+var model = lib.db.model('Client')
+model.findOne({_id: id})
+.exec(function(err, client) {
+if(err) return next(controller.RESTError('InternalServe
+rError', err))
+client = _.extend(client, req.body)
+client.save(function(err, newClient) {
+if(err) return next(controller.RESTError('Int
+ernalServerError', err))
+controller.writeHAL(res, newClient)
+})
+})
+}
+})
+return controller
+}
+/controllers/employees.js
+var BaseController = require("./basecontroller"),
+_ = require("underscore"),
+swagger = require("swagger-node-restify")
+function Employees() {
+}
+Employees.prototype = new BaseController()
+module.exports = function(lib) {
+var controller = new Employees();
+controller.addAction({
+'path': '/employees',
+'method': 'GET',
+'summary': 'Returns the list of employees across all stores',
+'responseClass': 'Employee',
+'nickname': 'getEmployees'
+}, function(req, res, next) {
+lib.db.model('Employee').find().exec(function(err, list) {
+if(err) return next(controller.RESTError('InternalServerError', err))
+controller.writeHAL(res, list)
+})
+})
+controller.addAction({
+'path': '/employees/{id}',
+'method': 'GET',
+'params': [swagger.pathParam('id','The id of the employee','string')],
+'summary': 'Returns the data of an employee',
+'responseClass': 'Employee',
+'nickname': 'getEmployee'
+}, function(req, res, next) {
+var id = req.params.id
+if(id) {
+lib.db.model('Employee').findOne({_id: id}).exec(function(err, empl) {
+if(err) return next(err)
+if(!empl) {
+return next(controller.RESTError('ResourceNotFoundErr
+or', 'Not found'))
+}
+controller.writeHAL(res, empl)
+})
+} else {
+next(controller.RESTError('InvalidArgumentError', 'Invalid id'))
+}
+})
+controller.addAction({
+'path': '/employees',
+'method': 'POST',
+'params': [swagger.bodyParam('employee', 'The JSON data of the employee',
+'string')],
+'summary': 'Adds a new employee to the list',
+'responseClass': 'Employee',
+'nickname': 'newEmployee'
+}, function(req, res, next) {
+var data = req.body
+if(data) {
+var newEmployee = lib.db.model('Employee')(data)
+newEmployee.save(function(err, emp) {
+if(err) return next(controller.RESTError('InternalSer
+verError', err))
+controller.writeHAL(res, emp)
+})
+} else {
+next(controller.RESTError('InvalidArgumentError', 'No data received'))
+}
+})
+controller.addAction({
+'path': '/employees/{id}',
+'method': 'PUT',
+'summary': "UPDATES an employee's information",
+'params': [swagger.pathParam('id','The id of the employee','string'),
+swagger.bodyParam('employee', 'The new information to update', 'string')],
+'responseClass': 'Employee',
+'nickname': 'updateEmployee'
+}, function(req, res, next) {
+var data = req.body
+var id = req.params.id
+if(id) {
+lib.db.model("Employee").findOne({_id: id}).exec(function(err, emp) {
+if(err) return next(controller.RESTError('InternalSer
+verError', err))
+emp = _.extend(emp, data)
+emp.save(function(err, employee) {
+if(err) return next(controller.RESTError('Int
+ernalServerError', err))
+controller.writeHAL(res, employee)
+})
+})
+} else {
+next(controller.RESTError('InvalidArgumentError','Invalid id
+received'))
+}
+})
+return controller
+}
+
+/lib/index.js
+var lib = {
+helpers: require("./helpers"),
+config: require("./config"),
+controllers: require("../controllers"),
+schemas: require("../schemas"),
+schemaValidator: require("./schemaValidator"),
+db: require("./db")
+}
+module.exports = lib
+/lib/helpers.js
+var halson = require("halson"),
+_ = require("underscore")
+module.exports = {
+makeHAL: makeHAL,
+setupRoutes: setupRoutes,
+validateKey: validateKey
+}
+function setupRoutes(server, swagger, lib) {
+for(controller in lib.controllers) {
+cont = lib.controllers[controller](lib)
+cont.setUpActions(server, swagger)
+}
+}
+/**
+Makes sure to sign every request and compare it
+against the key sent by the client, this way
+we make sure its authentic
+*/
+function validateKey(hmacdata, key, lib) {
+//This is for testing the swagger-ui, should be removed after development to
+avoid possible security problem :)
+if(+key == 777) return true
+var hmac = require("crypto").createHmac("md5", lib.config.secretKey)
+.update(hmacdata)
+.digest("hex");
+//TODO: Remove this line
+console.log(hmac)
+return hmac == key
+}
+function makeHAL(data, links, embed) {
+var obj = halson(data)
+if(links && links.length > 0) {
+_.each(links, function(lnk) {
+obj.addLink(lnk.name, {
+href: lnk.href,
+title: lnk.title || ''
+})
+})
+}
+if(embed && embed.length > 0) {
+_.each(embed, function (item) {
+obj.addEmbed(item.name, item.data)
+})
+}
+return obj
+}
+/lib/schemaValidator.js
+var tv4 = require("tv4"),
+formats = require("tv4-formats"),
+schemas = require("../request_schemas/")
+module.exports = {
+validateRequest: validate
+}
+function validate (req) {
+var res = {valid: true}
+tv4.addFormat(formats)
+var schemaKey = req.route ? req.route.path.toString().replace("/", "") : ''
+var actionKey = req.route.name
+if(schemas[schemaKey]) {
+var mySchema = schemas[schemaKey][actionKey]
+var data = null
+if(mySchema) {
+switch(mySchema.validate) {
+case 'params':
+data = req.params
+break
+}
+res = tv4.validateMultiple(data, mySchema.schema)
+}
+}
+return res
+}
+/lib/db.js
+var config = require("./config"),
+_ = require("underscore"),
+mongoose = require("mongoose"),
+Schema = mongoose.Schema
+var obj = {
+cachedModels: {},
+getModelFromSchema: getModelFromSchema,
+model: function(mname) {
+return this.models[mname]
+},
+connect: function(cb) {
+mongoose.connect(config.database.host + "/" + config.database.dbname)
+this.connection = mongoose.connection
+this.connection.on('error', cb)
+this.connection.on('open', cb)
+}
+}
+obj.models = require("../models/")(obj)
+module.exports = obj
+function translateComplexType(v, strType) {
+var tmp = null
+var type = strType || v['type']
+switch(type) {
+case 'array':
+tmp = []
+if(v['items']['$ref'] != null) {
+tmp.push({
+type: Schema.ObjectId,
+ref: v['items']['$ref']
+})
+} else {
+var originalType = v['items']['type']
+v['items']['type'] = translateTypeToJs(v['items']
+['type'])
+tmp.push(translateComplexType(v['items'],
+originalType))
+}
+break;
+case 'object':
+tmp = {}
+var props = v['properties']
+_.each(props, function(data, k) {
+if(data['$ref'] != null) {
+tmp[k] = {
+type: Schema.ObjectId,
+ref: data['$ref']
+}
+} else {
+tmp[k] = translateTypeToJs(data['type'])
+}
+})
+break;
+default:
+tmp = v
+tmp['type'] = translateTypeToJs(type)
+break;
+}
+return tmp
+}
+/**
+Turns the JSON Schema into a Mongoose schema
+*/
+function getModelFromSchema(schema) {
+var data = {
+name: schema.id,
+schema: {}
+}
+var newSchema = {}
+var tmp = null
+_.each(schema.properties, function(v, propName) {
+if(v['$ref'] != null) {
+tmp = {
+type: Schema.ObjectId,
+ref: v['$ref']
+}
+} else {
+tmp = translateComplexType(v) //{}
+}
+newSchema[propName] = tmp
+})
+data.schema = new Schema(newSchema)
+return data
+}
+function translateTypeToJs(t) {
+if(t.indexOf('int') === 0) {
+t = "number"
+}
+return eval(t.charAt(0).toUpperCase() + t.substr(1))
+}
+/lib/config.js
+module.exports = {
+secretKey: 'this is a secret key, right here',
+server: {
+name: 'ComeNRead API',
+version: '1.0.0',
+port: 9000
+},
+database: {
+host: 'mongodb://localhost',
+dbname: 'comenread'
+}
+}
+
+/models/index.js
+module.exports = function(db) {
+return {
+"Book": require("./book")(db),
+"Booksale": require("./booksale")(db),
+"ClientReview": require("./clientreview")(db),
+"Client": require("./client")(db),
+"Employee": require("./employee")(db),
+"Store": require("./store")(db),
+"Author": require("./author")(db)
+}
+}
+/models/author.js
+var mongoose = require("mongoose")
+jsonSelect = require('mongoose-json-select'),
+helpers = require("../lib/helpers"),
+_ = require("underscore")
+module.exports = function(db) {
+var schema = require("../schemas/author.js")
+var modelDef = db.getModelFromSchema(schema)
+modelDef.schema.plugin(jsonSelect, '-books')
+modelDef.schema.methods.toHAL = function() {
+var halObj = helpers.makeHAL(this.toJSON(),
+[{name: 'books', 'href': '/authors/' + this.id + '/books',
+'title': 'Books'}])
+if(this.books.length > 0) {
+if(this.books[0].toString().length != 24) {
+halObj.addEmbed('books', _.map(this.books,
+function(e) { return e.toHAL() }))
+}
+}
+return halObj
+}
+return mongoose.model(modelDef.name, modelDef.schema)
+}
+
+if(this.books[0].toString().length != 24) {
+//…
+}
+
+/models/book.js
+var mongoose = require("mongoose"),
+jsonSelect = require('mongoose-json-select'),
+helpers = require("../lib/helpers"),
+_ = require("underscore")
+module.exports = function(db) {
+var schema = require("../schemas/book.js")
+var modelDef = db.getModelFromSchema(schema)
+modelDef.schema.plugin(jsonSelect, '-stores -authors')
+modelDef.schema.methods.toHAL = function() {
+var halObj = helpers.makeHAL(this.toJSON(),
+[{name: 'reviews', href: '/books/' + this.id + '/reviews',
+title: 'Reviews'}])
+if(this.stores.length > 0) {
+if(this.stores[0].store.toString().length != 24) {
+halObj.addEmbed('stores', _.map(this.stores, function(s) {
+return { store: s.store.toHAL(), copies: s.copies } } ))
+}
+}
+if(this.authors.length > 0) {
+if(this.authors[0].toString().length != 24) {
+halObj.addEmbed('authors', this.authors)
+}
+}
+return halObj
+}
+return mongoose.model(modelDef.name, modelDef.schema)
+}
+/models/booksale.js
+var mongoose = require("mongoose"),
+jsonSelect = require('mongoose-json-select'),
+helpers = require("../lib/helpers"),
+_ = require("underscore")
+module.exports = function(db) {
+var schema = require("../schemas/booksale.js")
+var modelDef = db.getModelFromSchema(schema)
+modelDef.schema.plugin(jsonSelect, '-store -employee -client -books')
+modelDef.schema.methods.toHAL = function() {
+var halObj = helpers.makeHAL(this.toJSON())
+if(this.books.length > 0) {
+if(this.books[0].toString().length != 24) {
+halObj.addEmbed('books', _.map(this.books,
+function(b) { return b.toHAL() }))
+}
+}
+if(this.store.toString().length != 24) {
+halObj.addEmbed('store', this.store.toHAL())
+}
+if(this.employee.toString().length != 24) {
+halObj.addEmbed('employee', this.employee.toHAL())
+}
+if(this.client.toString().length != 24) {
+halObj.addEmbed('client', this.client.toHAL())
+}
+return halObj
+}
+return mongoose.model(modelDef.name, modelDef.schema)
+}
+/models/client.js
+var mongoose = require("mongoose"),
+jsonSelect = require('mongoose-json-select'),
+helpers = require("../lib/helpers"),
+_ = require("underscore")
+module.exports = function(db) {
+var schema = require("../schemas/client.js")
+var modelDef = db.getModelFromSchema(schema)
+modelDef.schema.methods.toHAL = function() {
+var halObj = helpers.makeHAL(this.toJSON())
+return halObj
+}
+return mongoose.model(modelDef.name, modelDef.schema)
+}
+/models/clientreview.js
+var mongoose = require("mongoose"),
+jsonSelect = require('mongoose-json-select'),
+helpers = require("../lib/helpers"),
+_ = require("underscore")
+module.exports = function(db) {
+var schema = require("../schemas/clientreview.js")
+var modelDef = db.getModelFromSchema(schema)
+modelDef.schema.methods.toHAL = function() {
+var halObj = helpers.makeHAL(this.toJSON())
+return halObj
+}
+modelDef.schema.post('save', function(doc, next) {
+db.model('Book').update({_id: doc.book}, {$addToSet: {reviews: this.
+id}}, function(err) {
+next(err)
+})
+})
+return mongoose.model(modelDef.name, modelDef.schema)
+}
+/models/employee.js
+var mongoose = require("mongoose"),
+jsonSelect = require('mongoose-json-select'),
+helpers = require("../lib/helpers"),
+_ = require("underscore")
+module.exports = function(db) {
+var schema = require("../schemas/employee.js")
+var modelDef = db.getModelFromSchema(schema)
+modelDef.schema.methods.toHAL = function() {
+var halObj = helpers.makeHAL(this.toJSON())
+return halObj
+}
+return mongoose.model(modelDef.name, modelDef.schema)
+}
+/models/store.js
+var mongoose = require("mongoose"),
+jsonSelect = require("mongoose-json-select"),
+_ = require("underscore"),
+helpers = require("../lib/helpers")
+module.exports = function(db) {
+var schema = require("../schemas/store.js")
+var modelDef = db.getModelFromSchema(schema)
+modelDef.schema.plugin(jsonSelect, '-employees')
+modelDef.schema.methods.toHAL = function() {
+var halObj = helpers.makeHAL(this.toJSON(),
+[{name: 'books', href: '/stores/' + this.id + '/
+books', title: 'Books'},
+{name: 'booksales', href: '/stores/' + this.id + '/
+booksales', title: 'Book Sales'}])
+if(this.employees.length > 0) {
+if(this.employees[0].toString().length != 24) {
+halObj.addEmbed('employees', _.map(this.employees,
+function(e) { return e.toHAL() }))
+}
+}
+return halObj
+}
+var model = mongoose.model(modelDef.name, modelDef.schema)
+return model
+}
+
+
+/request_schemas/ [CONTROLLER NAME] .js
+module.exports = {
+[ENDPOINT NICKNAME] : {
+validate : [TYPE ],
+schema : [JSON SCHEMA]
+}
+}
+
+/request_schemas/booksales.js
+module.exports = {
+getbooksales: {
+validate: 'params' ,
+schema: {
+type: "object",
+properties: {
+start_date: {
+type: 'string',
+format:'date'
+},
+end_date: {
+type: 'string',
+format:'date'
+},
+store_id: {
+type: 'string'
+}
+}
+}
+}
+}
+
+/schemas/clientreview.js
+module.exports = {
+"id": "ClientReview",
+"properties": {
+"client": {
+"$ref": "Client",
+"description": "The client who submits the review"
+},
+"book": {
+"$ref": "Book",
+"description": "The book being reviewed"
+},
+"review_text": {
+"type": "string",
+"description": "The actual review text"
+},
+"stars": {
+"type": "integer",
+"description": "The number of stars, from 0 to 5",
+"min": 0,
+"max": 5
+}
+}
+}
+
+
+
+module.exports = {
+models: {
+BookSale: require("./booksale"),
+Book: require("./book"),
+Author: require("./author"),
+Store: require("./store"),
+Employee: require("./employee"),
+Client: require("./client"),
+ClientReview: require("./clientreview")
+}
+}
+
+/schemas/author.js
+module.exports = {
+"id": "Author",
+"properties": {
+"name": {
+"type": "string",
+"description": "The full name of the author"
+},
+"description": {
+"type": "string",
+"description": "A small bio of the author"
+},
+"books": {
+"type": "array",
+"description": "The list of books published on at least one
+of the stores by this author",
+"items": {
+"$ref": "Book"
+}
+},
+"website": {
+"type": "string",
+"description": "The Website url of the author"
+},
+"avatar": {
+"type": "string",
+"description": "The url for the avatar of this author"
+}
+}
+}
+/schemas/book.js
+module.exports = {
+"id": "Book",
+"properties": {
+"title": {
+"type": "string",
+"description": "The title of the book"
+},
+"authors": {
+"type":"array",
+"description":"List of authors of the book",
+"items": {
+"$ref": "Author"
+}
+},
+
+"isbn_code": {
+"description": "Unique identifier code of the book",
+"type":"string"
+},
+"stores": {
+"type": "array",
+"description": "The stores where clients can buy this book",
+"items": {
+"type": "object",
+"properties": {
+"store": {
+"$ref": "Store",
+},
+"copies": {
+"type": "integer"
+}
+}
+}
+},
+"genre": {
+"type": "string",
+"description": "Genre of the book"
+},
+"description": {
+"type": "string",
+"description": "Description of the book"
+},
+"reviews": {
+"type": "array",
+"items": {
+"$ref": "ClientReview"
+}
+},
+"price": {
+"type": "number",
+"minimun": 0,
+"description": "The price of this book"
+}
+}
+}
+/schemas/booksale.js
+module.exports = {
+"id": "BookSale",
+"properties": {
+"date": {
+"type":"date",
+"description": "Date of the transaction"
+},
+"books": {
+"type": "array",
+"description": "Books sold",
+"items": {
+"$ref": "Book"
+}
+},
+"store": {
+"type": "object",
+"description": "The store where this sale took place",
+"type": "object",
+"$ref": "Store"
+},
+"employee": {
+"type": "object",
+"description": "The employee who makes the sale",
+"$ref": "Employee"
+},
+"client": {
+"type": "object",
+"description": "The person who gets the books",
+"$ref": "Client",
+},
+"totalAmount": {
+"type": "integer"
+}
+}
+}
+/schemas/client.js
+module.exports = {
+"id": "Client",
+"properties": {
+"name": {
+"type": "string",
+"description": "Full name of the client"
+},
+"address": {
+"type": "string",
+"description": "Address of residence of this client"
+},
+"phone_number": {
+"type": "string",
+"description": "Contact phone number for the client"
+},
+"email": {
+"type": "string",
+"description": "Email of the client"
+}
+}
+}
+
+/schemas/employee.js
+module.exports = {
+"id": "Employee",
+"properties": {
+"first_name": {
+"type": "string",
+"description": "First name of the employee"
+},
+"last_name": {
+"type": "string",
+"description": "Last name of the employee"
+},
+"birthdate": {
+"type": "string",
+"description": "Date of birth of this employee"
+},
+"address": {
+"type": "string",
+"description": "Address for the employee"
+},
+"phone_numbers": {
+"type": "array",
+"description": "List of phone numbers of this employee",
+"items": {
+"type": "string"
+}
+},
+"email": {
+"type": "string",
+"description": "Employee's email"
+},
+"hire_date": {
+"type": "string",
+"description": "Date when this employee was hired"
+},
+"employee_number": {
+"type": "number",
+"description": "Unique identifier of the employee"
+}
+}
+}
+/schemas/store.js
+module.exports = {
+"id": "Store",
+"properties": {
+"name": {
+"type": "string",
+"description": "The actual name of the store"
+},
+"address": {
+"type": "string",
+"description": "The address of the store"
+},
+"state": {
+"type": "string",
+"description": "The state where the store resides"
+},
+"phone_numbers": {
+"type": "array",
+"description": "List of phone numbers for the store",
+"items": {
+"type": "string"
+}
+},
+"employees": {
+"type": "array",
+"description": "List of employees of the store",
+"items": {
+"$ref": "Employee"
+}
+}
+}
+}
+
+/package.json
+{
+"name": "come_n_read",
+"version": "1.0.0",
+"description": "",
+"main": "index.js",
+"scripts": {
+"test": "echo \"Error: no test specified\" && exit 1"
+},
+"author": "",
+"license": "ISC",
+"dependencies": {
+"colors": "^1.0.3",
+"halson": "^2.3.1",
+"mongoose": "^3.8.23",
+"mongoose-json-select": "^0.2.1",
+"restify": "^2.8.5",
+"swagger-node-restify": "^0.1.2",
+"tv4": "^1.1.9",
+"tv4-formats": "^1.0.0",
+"underscore": "^1.7.0"
+}
+}
+
+
+/index.js
+var restify = require("restify"),
+colors = require("colors"),
+lib = require("./lib"),
+swagger = require("swagger-node-restify"),
+config = lib.config
+var server = restify.createServer(lib.config.server)
+//Middleware setup
+server.use(restify.queryParser())
+server.use(restify.bodyParser())
+restify.defaultResponseHeaders = function(data) {
+this.header('Access-Control-Allow-Origin', '*')
+}
+///Middleware to check for valid api key sent
+server.use(function(req, res, next) {
+//We move forward if we're dealing with the swagger-ui or a valid key
+if(req.url.indexOf("swagger-ui") != -1 || lib.helpers.validateKey(req.
+headers.hmacdata || '', req.params.api_key, lib)) {
+next()
+} else {
+res.send(401, { error: true, msg: 'Invalid api key sent'})
+}
+})
+/**
+Validate each request, as long as there is a schema for it
+*/
+server.use(function(req, res, next) {
+var results = lib.schemaValidator.validateRequest(req)
+if(results.valid) {
+next()
+} else {
+res.send(400, results)
+}
+})
+//the swagger-ui is inside the "swagger-ui" folder
+server.get(/^\/swagger-ui(\/.*)?/, restify.serveStatic({
+directory: __dirname + '/',
+default: 'index.html'
+}))
+//setup section
+swagger.addModels(lib.schemas)
+swagger.setAppHandler(server)
+lib.helpers.setupRoutes(server, swagger, lib)
+swagger.configureSwaggerPaths("", "/api-docs", "") //we remove the {format} part of
+the paths, to
+swagger.configure(' http://localhost:9000 ', '0.1')
+//start the server
+server.listen(config.server.port, function() {
+console.log("Server started succesfully…".green)
+lib.db.connect(function(err) {
+if(err) console.log("Error trying to connect to database: ".red,
+err.red)
+else console.log("Database service successfully started".green)
+})
+})
+
+
+
+middleware setup
+bootstrap process
+middleware mechanics
+query parser params into obj
+body parser post put request as obj ith json string autoparsing
+security check auto client everitime
+validate check json schema
+static content folder set of routes with restify server statci content
+
+
+
+troubleshooting
+pag 167
+
+async programming
+
+external resource
+
+controllers action code and errors trap
+asyncCall ...callback ...response
+console.log myresponse
+
+middleware functions
+entire middleware chain is followin the serial flow mechanics 
+give control to the next middleware
+async code inside functions 
+server use restify queryparser or bodyparser
+hang up never get response from sevrer
+page 169 modeldef.schema.post
+db.model
+function err
+post save hook
+async call inside middleware
+
+
+swagger ui and documentation
+configuration
+swagger-node-restify
+generate back end endpoints
+addmodels
+setapphandler
+lib.helper.setuproutes
+configuresqaggerpaths
+configure
+
+serget.get...
+static content
+
+
+
+
+cors issies
+cross origin resource sharing
+xmlhttprequest cannot load x origin y is not allowed by access-control-allow-origin
+
+allow cors
+request is possible send to api server
+pre flight acr method and header
+server response with what auth is
+aca orogin and header
+acr access control request
+aca access control allow/ed
+
+fail with a different 200 error response
+
+restify.deafaultresponseheaders
+this.header
+
+
+
+
+
+
+data types json schema dt to mangoode types
+
+api js
+json schema
+mongoose
+getmodelfromschema
+translatetojs
+mongoose validators
+require
+object type with properties requires
+if( requiredProperties && requiredProperties.indexOf(propName) != -1) {
+v.required = true
+}
